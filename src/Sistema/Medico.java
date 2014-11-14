@@ -1,10 +1,10 @@
 /**
- * 
+ * Medico é uma pessoa que realiza consultas dependendo de sua especialidade e disponibilidade de agenda.
  */
 package Sistema;
 
 /**
- * @author Gabriel Mello
+ *
  *
  */
 public class Medico {

@@ -1,10 +1,10 @@
 /**
- * 
+ * Cliente é uma pessoa que receberá os serviços do hospital. 
  */
 package Sistema;
 
 /**
- * @author Gabriel Mello
+ *
  *
  */
 public class Cliente {

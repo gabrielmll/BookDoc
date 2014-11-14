@@ -1,10 +1,10 @@
 /**
- * 
+ * Pessoa é uma classe que engloba as entidades Médico, Cliente, Técnico e Funcionário. 
  */
 package Sistema;
 
 /**
- * @author Gabriel Mello
+ *
  *
  */
 public class Pessoa {

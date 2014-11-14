@@ -1,10 +1,10 @@
 /**
- * 
+ * Funcionário é uma pessoa que gerencia o setor administrativo.
  */
 package Sistema;
 
 /**
- * @author Gabriel Mello
+ *
  *
  */
 public class Funcionario {
