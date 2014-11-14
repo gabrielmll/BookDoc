@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listas>
+	<clinica>
+		<nome>L'hopital</nome>
+	</clinica>
+	<pessoas>
+		<clientes>
+			<cliente>
+				<nome>João Chaves</nome>
+			</cliente>
+			<cliente>
+				<nome>Juca Batista</nome>
+			</cliente>
+			<cliente>
+				<nome>Tião Maravilha</nome>
+			</cliente>
+			<cliente>
+				<nome>El Cabron</nome>
+			</cliente>
+		</clientes>
+		<medicos>
+			<medico>
+				<nome>Dr. Rey</nome>
+				<especialidade>Plástica</especialidade>
+			</medico>
+			<medico>
+				<nome>Dra. La Rousse</nome>
+				<especialidade>Testa</especialidade>
+			</medico>
+			<medico>
+				<nome>Dr. Rodney</nome>
+				<especialidade>Plástica</especialidade>
+			</medico>
+			<medico>
+				<nome>Dra. Maria Joana</nome>
+				<especialidade>Psicologia</especialidade>
+			</medico>
+			<medico>
+				<nome>Dr. Dalai Lama</nome>
+				<especialidade>Cardiologia</especialidade>
+			</medico>
+		</medicos>
+	</pessoas>
+	<exames>
+		<exame>
+		</exame>
+	</exames>
+</listas>
