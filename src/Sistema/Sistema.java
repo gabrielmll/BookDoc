@@ -11,7 +11,7 @@ public class Sistema {
 	private Clinica clinica;
 	private Listas listas; // listas contem Pessoas, Exames e Consultas
 
-	Sistema(String nomeClinica) {
+	public Sistema(String nomeClinica) {
 		setClinica(new Clinica(nomeClinica));
 	}
 
@@ -31,4 +31,15 @@ public class Sistema {
 		this.clinica = clinica;
 	}
 
+	public void addPessoa(Pessoa p) {
+		listas.addOject(p);
+	}
+
+	public void addExame(Exame e) {
+		listas.addOject(e);
+	}
+
+	public void addConsulta(Consulta c) {
+		listas.addOject(c);
+	}
 }
