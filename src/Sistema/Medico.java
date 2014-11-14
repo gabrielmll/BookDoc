@@ -7,6 +7,15 @@ package Sistema;
  *
  *
  */
-public class Medico {
+public class Medico extends Pessoa {
+	private String especialidade;
 
+	Medico(int id, String nome, String especialidade) {
+		super(id, nome);
+		this.especialidade = especialidade;
+	}
+
+	public String getEspecialidade() {
+		return especialidade;
+	}
 }

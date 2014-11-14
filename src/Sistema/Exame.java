@@ -8,5 +8,10 @@ package Sistema;
  *
  */
 public class Exame {
-
+	private Agenda agenda;
+	private Cliente cliente;
+	
+	Exame(Cliente cliente){
+		this.cliente = cliente;
+	}
 }

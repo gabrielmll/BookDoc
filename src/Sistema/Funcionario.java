@@ -7,6 +7,15 @@ package Sistema;
  *
  *
  */
-public class Funcionario {
+public class Funcionario extends Pessoa{
+	private String cargo;
 
+	Funcionario(int id, String nome, String cargo) {
+		super(id, nome);
+		this.cargo = cargo;
+	}
+
+	public String getCargo() {
+		return cargo;
+	}
 }
