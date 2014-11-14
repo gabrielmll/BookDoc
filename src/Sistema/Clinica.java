@@ -17,4 +17,8 @@ public class Clinica {
 	public String getNome() {
 		return nome;
 	}
+	
+	public String toString(){
+		return nome;
+	}
 }
