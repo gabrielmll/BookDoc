@@ -7,7 +7,7 @@ package Sistema;
  *
  *
  */
-public class Tecnico extends Pessoa{
+public class Tecnico extends Pessoa {
 	int id;
 	private String especialidade;
 
@@ -21,4 +21,11 @@ public class Tecnico extends Pessoa{
 		return especialidade;
 	}
 
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public int getId() {
+		return this.id;
+	}
 }

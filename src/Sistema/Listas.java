@@ -14,6 +14,11 @@ public class Listas {
 	private static ArrayList<Consulta> consultas = new ArrayList<Consulta>();
 	private static ArrayList<Exame> exames = new ArrayList<Exame>();
 
+	private static int idCliente = 1;
+	private static int idMedico = 1;
+	private static int idFuncionario = 1;
+	private static int idTecnico = 1;
+
 	public ArrayList<Pessoa> getPessoas() {
 		return pessoas;
 	}
@@ -83,9 +88,22 @@ public class Listas {
 	}
 
 	public void addOject(Object obj) {
-		if (obj instanceof Pessoa)
+		if (obj instanceof Pessoa) {
+			if (obj instanceof Cliente) {
+				((Cliente) obj).setId(idCliente);
+				idCliente++;
+			} else if (obj instanceof Medico) {
+				((Medico) obj).setId(idMedico);
+				idMedico++;
+			} else if (obj instanceof Tecnico) {
+				((Tecnico) obj).setId(idTecnico);
+				idTecnico++;
+			} else if (obj instanceof Funcionario) {
+				((Funcionario) obj).setId(idFuncionario);
+				idFuncionario++;
+			}
 			getPessoas().add((Pessoa) obj);
-		else if (obj instanceof Consulta) {
+		} else if (obj instanceof Consulta) {
 			getConsultas().add((Consulta) obj);
 		} else if (obj instanceof Exame) {
 			getExames().add((Exame) obj);
@@ -96,7 +114,7 @@ public class Listas {
 		String s = null;
 		s = "Pessoas\n";
 		for (Pessoa p : getPessoas()) {
-			s = s + p.toString() + "\n";
+			s = s + p.getId() + " " + p.toString() + "\n";
 		}
 
 		return s;

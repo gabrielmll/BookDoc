@@ -7,7 +7,7 @@ package Sistema;
  *
  *
  */
-public class Funcionario extends Pessoa{
+public class Funcionario extends Pessoa {
 	int id;
 	private String cargo;
 
@@ -19,5 +19,13 @@ public class Funcionario extends Pessoa{
 
 	public String getCargo() {
 		return cargo;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public int getId() {
+		return this.id;
 	}
 }
