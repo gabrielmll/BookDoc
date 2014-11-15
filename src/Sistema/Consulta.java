@@ -11,7 +11,7 @@ public class Consulta {
 	private Medico medico;
 	private Cliente cliente;
 	
-	Consulta(Medico medico, Cliente cliente){
+	public Consulta(Medico medico, Cliente cliente){
 		this.medico = medico;
 		this.cliente = cliente;
 	}

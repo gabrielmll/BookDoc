@@ -6,13 +6,13 @@
 	<pessoas>
 		<clientes>
 			<cliente>
-				<nome>João Chaves</nome>
+				<nome>Jao Chaves</nome>
 			</cliente>
 			<cliente>
 				<nome>Juca Batista</nome>
 			</cliente>
 			<cliente>
-				<nome>Tião Maravilha</nome>
+				<nome>Tiao Maravilha</nome>
 			</cliente>
 			<cliente>
 				<nome>El Cabron</nome>
@@ -21,7 +21,7 @@
 		<medicos>
 			<medico>
 				<nome>Dr. Rey</nome>
-				<especialidade>Plástica</especialidade>
+				<especialidade>Plastica</especialidade>
 			</medico>
 			<medico>
 				<nome>Dra. La Rousse</nome>
@@ -29,7 +29,7 @@
 			</medico>
 			<medico>
 				<nome>Dr. Rodney</nome>
-				<especialidade>Plástica</especialidade>
+				<especialidade>Plastica</especialidade>
 			</medico>
 			<medico>
 				<nome>Dra. Maria Joana</nome>
@@ -59,4 +59,11 @@
 			<idCliente>1</idCliente>
 		</exame>
 	</exames>
+	<consultas>
+		<consulta>
+			<data></data>
+			<idMedico></idMedico>
+			<idCliente></idCliente>
+		</consulta>
+	</consultas>
 </listas>

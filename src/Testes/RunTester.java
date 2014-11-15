@@ -137,4 +137,18 @@ public class RunTester {
 			}
 		}
 	}
+	
+	public static void populaConsultas(Sistema sis, List<Element> consultas) {
+		for (Element c : consultas) {
+			List<Element> consulta = c.getChildren("consulta");
+
+			for (Element cadaConsulta : consulta) {
+				Cliente cl = (Cliente)sis.getListas().getPessoaById(Integer.parseInt(cadaConsulta.getChildText("idCliente")));
+				Medico md = (Medico)sis.getListas().getPessoaById(Integer.parseInt(cadaConsulta.getChildText("idMedico")));
+				if (cl != null){
+					sis.addConsulta(new Consulta(md, cl));
+				}
+			}
+		}
+	}
 }
