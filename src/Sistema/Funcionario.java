@@ -8,10 +8,12 @@ package Sistema;
  *
  */
 public class Funcionario extends Pessoa{
+	int id;
 	private String cargo;
 
 	public Funcionario(int id, String nome, String cargo) {
-		super(id, nome);
+		super(nome);
+		this.id = id;
 		this.cargo = cargo;
 	}
 

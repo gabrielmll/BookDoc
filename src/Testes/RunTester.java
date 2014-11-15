@@ -130,7 +130,7 @@ public class RunTester {
 			List<Element> exame = e.getChildren("exame");
 
 			for (Element cadaExame : exame) {
-				Cliente c = (Cliente)sis.getListas().getPessoaById(Integer.parseInt(cadaExame.getChildText("idCliente")));
+				Cliente c = (Cliente)sis.getListas().getClienteById(Integer.parseInt(cadaExame.getChildText("idCliente")));
 				if (c != null){
 					sis.addExame(new Exame(c));
 				}
@@ -143,8 +143,8 @@ public class RunTester {
 			List<Element> consulta = c.getChildren("consulta");
 
 			for (Element cadaConsulta : consulta) {
-				Cliente cl = (Cliente)sis.getListas().getPessoaById(Integer.parseInt(cadaConsulta.getChildText("idCliente")));
-				Medico md = (Medico)sis.getListas().getPessoaById(Integer.parseInt(cadaConsulta.getChildText("idMedico")));
+				Cliente cl = (Cliente)sis.getListas().getClienteById(Integer.parseInt(cadaConsulta.getChildText("idCliente")));
+				Medico md = (Medico)sis.getListas().getMedicoById(Integer.parseInt(cadaConsulta.getChildText("idMedico")));
 				if (cl != null){
 					sis.addConsulta(new Consulta(md, cl));
 				}

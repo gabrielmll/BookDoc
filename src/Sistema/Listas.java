@@ -22,10 +22,45 @@ public class Listas {
 		Listas.pessoas = pessoas;
 	}
 
-	public Pessoa getPessoaById(int id) {
+	public static ArrayList<Cliente> getClientes() {
+		ArrayList<Cliente> c = new ArrayList<Cliente>();
 		for (Pessoa p : pessoas) {
-			if (p.getId() == id) {
-				return p;
+			if (p instanceof Cliente) {
+				c.add((Cliente) p);
+			}
+		}
+
+		return c;
+	}
+
+	public static ArrayList<Medico> getMedicos() {
+		ArrayList<Medico> m = new ArrayList<Medico>();
+		for (Pessoa p : pessoas) {
+			if (p instanceof Medico) {
+				m.add((Medico) p);
+			}
+		}
+
+		return m;
+	}
+
+	public Cliente getClienteById(int id) {
+		ArrayList<Cliente> clientes = getClientes();
+
+		for (Cliente c : clientes) {
+			if (c.getId() == id) {
+				return c;
+			}
+		}
+		return null;
+	}
+
+	public Medico getMedicoById(int id) {
+		ArrayList<Medico> medicos = getMedicos();
+
+		for (Medico m : medicos) {
+			if (m.getId() == id) {
+				return m;
 			}
 		}
 		return null;

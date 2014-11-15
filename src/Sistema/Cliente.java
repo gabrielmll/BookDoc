@@ -10,11 +10,13 @@ import java.util.ArrayList;
  *
  */
 public class Cliente extends Pessoa{
+	int id;
 	private ArrayList<Exame> exames = new ArrayList<Exame>();
 	private ArrayList<Consulta> consultas = new ArrayList<Consulta>();
 	
 	public Cliente(int id, String nome){
-		super(id, nome);
+		super(nome);
+		this.id = id;
 	}
 
 	public ArrayList<Exame> getExames() {
@@ -31,6 +33,10 @@ public class Cliente extends Pessoa{
 
 	public void setConsultas(ArrayList<Consulta> consultas) {
 		this.consultas = consultas;
+	}
+	
+	public int getId(){
+		return this.id;
 	}
 	
 }

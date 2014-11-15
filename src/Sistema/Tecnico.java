@@ -8,10 +8,12 @@ package Sistema;
  *
  */
 public class Tecnico extends Pessoa{
+	int id;
 	private String especialidade;
 
 	public Tecnico(int id, String nome, String especialidade) {
-		super(id, nome);
+		super(nome);
+		this.id = id;
 		this.especialidade = especialidade;
 	}
 
