@@ -10,7 +10,7 @@ package Sistema;
 public class Funcionario extends Pessoa{
 	private String cargo;
 
-	Funcionario(int id, String nome, String cargo) {
+	public Funcionario(int id, String nome, String cargo) {
 		super(id, nome);
 		this.cargo = cargo;
 	}

@@ -10,7 +10,7 @@ package Sistema;
 public class Medico extends Pessoa {
 	private String especialidade;
 
-	Medico(int id, String nome, String especialidade) {
+	public Medico(int id, String nome, String especialidade) {
 		super(id, nome);
 		this.especialidade = especialidade;
 	}

@@ -24,17 +24,14 @@ public class RunTester {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-		Sistema sis = null;
-		populaSistema(sis);
-		// criaSistema();
+		populaSistema();
 
 	}
 
-	public static void populaSistema(Sistema sis) {
+	public static void populaSistema() {
 		File f = new File("src/Testes/input.xml");
-
+		Sistema sis;
 		SAXBuilder builder = new SAXBuilder();
 
 		Document doc;
@@ -49,6 +46,8 @@ public class RunTester {
 
 			List<Element> pessoas = root.getChildren("pessoas");
 			populaPessoas(sis, pessoas);
+
+			System.out.println(sis.getListas().toString());
 
 		} catch (JDOMException e) {
 			// TODO Auto-generated catch block
@@ -70,21 +69,64 @@ public class RunTester {
 
 	public static void populaPessoas(Sistema sis, List<Element> pessoas) {
 
+		Listas l = new Listas();
+
 		for (Element p : pessoas) {
+			// Clientes
 			List<Element> clientes = p.getChildren("clientes");
 
 			for (Element cs : clientes) {
 				List<Element> cliente = cs.getChildren("cliente");
 
 				for (Element individuo : cliente) {
-					System.out.println(individuo.getChildText("nome"));
 					Cliente c = new Cliente(0, individuo.getChildText("nome"));
-					sis.getListas().getPessoas().size();
-					//sis.getListas().getPessoas().add(c);
+					l.getPessoas().add(c);
+				}
+			}
+
+			// Medicos
+			List<Element> medicos = p.getChildren("medicos");
+
+			for (Element ms : medicos) {
+				List<Element> medico = ms.getChildren("medico");
+
+				for (Element individuo : medico) {
+					Medico m = new Medico(0, individuo.getChildText("nome"),
+							individuo.getChildText("especialidade"));
+					l.getPessoas().add(m);
+				}
+			}
+
+			// Tecnicos
+			List<Element> tecnicos = p.getChildren("tecnicos");
+
+			for (Element ts : tecnicos) {
+				List<Element> tecnico = ts.getChildren("tecnico");
+
+				for (Element individuo : tecnico) {
+					Tecnico t = new Tecnico(0, individuo.getChildText("nome"),
+							individuo.getChildText("especialidade"));
+					l.getPessoas().add(t);
+				}
+			}
+
+			// Funcionarios
+			List<Element> funcionarios = p.getChildren("funcionarios");
+
+			for (Element fs : funcionarios) {
+				List<Element> funcionario = fs.getChildren("funcionario");
+
+				for (Element individuo : funcionario) {
+					Funcionario f = new Funcionario(0,
+							individuo.getChildText("nome"),
+							individuo.getChildText("cargo"));
+					l.getPessoas().add(f);
 				}
 			}
 		}
 
-		//sis.getListas().toString();
+		sis.setListas(l);
+
+		// sis.getListas().toString();
 	}
 }
