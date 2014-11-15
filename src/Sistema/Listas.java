@@ -22,6 +22,15 @@ public class Listas {
 		Listas.pessoas = pessoas;
 	}
 
+	public Pessoa getPessoaById(int id) {
+		for (Pessoa p : pessoas) {
+			if (p.getId() == id) {
+				return p;
+			}
+		}
+		return null;
+	}
+
 	public static ArrayList<Consulta> getConsultas() {
 		return consultas;
 	}
@@ -54,7 +63,7 @@ public class Listas {
 		for (Pessoa p : getPessoas()) {
 			s = s + p.toString() + "\n";
 		}
-		
+
 		return s;
 	}
 }

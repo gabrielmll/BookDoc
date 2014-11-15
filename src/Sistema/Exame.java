@@ -11,7 +11,7 @@ public class Exame {
 	private Agenda agenda;
 	private Cliente cliente;
 	
-	Exame(Cliente cliente){
+	public Exame(Cliente cliente){
 		this.cliente = cliente;
 	}
 }

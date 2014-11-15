@@ -130,7 +130,10 @@ public class RunTester {
 			List<Element> exame = e.getChildren("exame");
 
 			for (Element cadaExame : exame) {
-				cadaExame.getChildText("data");
+				Cliente c = (Cliente)sis.getListas().getPessoaById(Integer.parseInt(cadaExame.getChildText("idCliente")));
+				if (c != null){
+					sis.addExame(new Exame(c));
+				}
 			}
 		}
 	}
