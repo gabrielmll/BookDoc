@@ -13,6 +13,7 @@ public class Sistema {
 
 	public Sistema(String nomeClinica) {
 		setClinica(new Clinica(nomeClinica));
+		listas = new Listas();
 	}
 
 	public Listas getListas() {
@@ -32,7 +33,7 @@ public class Sistema {
 	}
 
 	public void addPessoa(Pessoa p) {
-		listas.addOject(p);
+		this.listas.addOject(p);
 	}
 
 	public void addExame(Exame e) {

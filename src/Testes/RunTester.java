@@ -15,14 +15,11 @@ import org.jdom2.input.SAXBuilder;
 import Sistema.*;
 
 /**
- * @author Gabriel Mello
+ *
  * 
  */
 public class RunTester {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 
 		populaSistema();
@@ -41,19 +38,23 @@ public class RunTester {
 
 			Element root = (Element) doc.getRootElement();
 
+			// Clinica
 			Element clinica = root.getChild("clinica");
 			sis = criaSistema(clinica.getChildText("nome"));
 
+			// Pessoas
 			List<Element> pessoas = root.getChildren("pessoas");
 			populaPessoas(sis, pessoas);
+
+			// Exames
+			List<Element> exames = root.getChildren("exames");
+			populaExames(sis, exames);
 
 			System.out.println(sis.getListas().toString());
 
 		} catch (JDOMException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -69,8 +70,6 @@ public class RunTester {
 
 	public static void populaPessoas(Sistema sis, List<Element> pessoas) {
 
-		Listas l = new Listas();
-
 		for (Element p : pessoas) {
 			// Clientes
 			List<Element> clientes = p.getChildren("clientes");
@@ -80,7 +79,7 @@ public class RunTester {
 
 				for (Element individuo : cliente) {
 					Cliente c = new Cliente(0, individuo.getChildText("nome"));
-					l.getPessoas().add(c);
+					sis.addPessoa(c);
 				}
 			}
 
@@ -93,7 +92,7 @@ public class RunTester {
 				for (Element individuo : medico) {
 					Medico m = new Medico(0, individuo.getChildText("nome"),
 							individuo.getChildText("especialidade"));
-					l.getPessoas().add(m);
+					sis.addPessoa(m);
 				}
 			}
 
@@ -106,7 +105,7 @@ public class RunTester {
 				for (Element individuo : tecnico) {
 					Tecnico t = new Tecnico(0, individuo.getChildText("nome"),
 							individuo.getChildText("especialidade"));
-					l.getPessoas().add(t);
+					sis.addPessoa(t);
 				}
 			}
 
@@ -120,13 +119,19 @@ public class RunTester {
 					Funcionario f = new Funcionario(0,
 							individuo.getChildText("nome"),
 							individuo.getChildText("cargo"));
-					l.getPessoas().add(f);
+					sis.addPessoa(f);
 				}
 			}
 		}
+	}
 
-		sis.setListas(l);
+	public static void populaExames(Sistema sis, List<Element> exames) {
+		for (Element e : exames) {
+			List<Element> exame = e.getChildren("exame");
 
-		// sis.getListas().toString();
+			for (Element cadaExame : exame) {
+				cadaExame.getChildText("data");
+			}
+		}
 	}
 }

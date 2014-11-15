@@ -43,6 +43,20 @@
 	</pessoas>
 	<exames>
 		<exame>
+			<data>201411150900</data>
+			<idCliente>1</idCliente>
+		</exame>
+		<exame>
+			<data>201411150900</data>
+			<idCliente>1</idCliente>
+		</exame>
+		<exame>
+			<data>201411150900</data>
+			<idCliente>1</idCliente>
+		</exame>
+		<exame>
+			<data>201411150900</data>
+			<idCliente>1</idCliente>
 		</exame>
 	</exames>
 </listas>
