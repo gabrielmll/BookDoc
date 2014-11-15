@@ -12,7 +12,7 @@ import org.jdom2.Element;
 import org.jdom2.JDOMException;
 import org.jdom2.input.SAXBuilder;
 
-import Sistema.Sistema;
+import Sistema.*;
 
 /**
  * @author Gabriel Mello
@@ -26,51 +26,30 @@ public class RunTester {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		populaSistema();
-		//criaSistema();
+		Sistema sis = null;
+		populaSistema(sis);
+		// criaSistema();
 
 	}
 
-	public static void criaSistema() {
-		String clinica = "L'hopital";
-
-		Sistema sis = new Sistema(clinica);
-
-		System.out.println("-=- " + sis.getClinica().toString() + " -=-");
-
-	}
-
-	public static void populaSistema() {
+	public static void populaSistema(Sistema sis) {
 		File f = new File("src/Testes/input.xml");
 
 		SAXBuilder builder = new SAXBuilder();
 
 		Document doc;
-		
+
 		try {
 			doc = builder.build(f);
 
 			Element root = (Element) doc.getRootElement();
 
-			List pessoas = root.getChildren("pessoas");
-			System.out.println(pessoas);
-/*			Iterator i = pessoas.iterator();
+			Element clinica = root.getChild("clinica");
+			sis = criaSistema(clinica.getChildText("nome"));
 
-			while (i.hasNext()) {
-				Element pessoa = (Element) i.next();
-				System.out.println("Nome: " + pessoa.getChildText("nome"));
-				System.out.println("Sobrenome: "
-						+ pessoa.getChildText("sobrenome"));
-				System.out.println("Sexo: " + pessoa.getAttributeValue("sexo"));
-				System.out.println("Nota( teste1 ): "
-						+ pessoa.getChild("notas").getChildText("teste1"));
-				System.out.println("Nota( teste2 ): "
-						+ pessoa.getChild("notas").getChildText("teste2"));
-				System.out.println("Nota( prova ): "
-						+ pessoa.getChild("notas").getChildText("prova"));
-				System.out.println();
-			}
-*/
+			List<Element> pessoas = root.getChildren("pessoas");
+			populaPessoas(sis, pessoas);
+
 		} catch (JDOMException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -78,5 +57,34 @@ public class RunTester {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+
+	public static Sistema criaSistema(String clinica) {
+
+		Sistema sis = new Sistema(clinica);
+
+		System.out.println("-=- " + sis.getClinica().toString() + " -=-");
+
+		return sis;
+	}
+
+	public static void populaPessoas(Sistema sis, List<Element> pessoas) {
+
+		for (Element p : pessoas) {
+			List<Element> clientes = p.getChildren("clientes");
+
+			for (Element cs : clientes) {
+				List<Element> cliente = cs.getChildren("cliente");
+
+				for (Element individuo : cliente) {
+					System.out.println(individuo.getChildText("nome"));
+					Cliente c = new Cliente(0, individuo.getChildText("nome"));
+					sis.getListas().getPessoas().size();
+					//sis.getListas().getPessoas().add(c);
+				}
+			}
+		}
+
+		//sis.getListas().toString();
 	}
 }

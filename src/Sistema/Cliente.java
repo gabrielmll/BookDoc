@@ -13,7 +13,7 @@ public class Cliente extends Pessoa{
 	private ArrayList<Exame> exames = new ArrayList<Exame>();
 	private ArrayList<Consulta> consultas = new ArrayList<Consulta>();
 	
-	Cliente(int id, String nome){
+	public Cliente(int id, String nome){
 		super(id, nome);
 	}
 

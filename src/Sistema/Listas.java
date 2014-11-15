@@ -14,7 +14,7 @@ public class Listas {
 	private static ArrayList<Consulta> consultas = new ArrayList<Consulta>();
 	private static ArrayList<Exame> exames = new ArrayList<Exame>();
 
-	public static ArrayList<Pessoa> getPessoas() {
+	public ArrayList<Pessoa> getPessoas() {
 		return pessoas;
 	}
 
@@ -46,5 +46,15 @@ public class Listas {
 		} else if (obj instanceof Exame) {
 			getExames().add((Exame) obj);
 		}
+	}
+
+	public String toString() {
+		String s = null;
+		s = "Pessoas\n";
+		for (Pessoa p : getPessoas()) {
+			s = s + p.toString() + "\n";
+		}
+		
+		return s;
 	}
 }
