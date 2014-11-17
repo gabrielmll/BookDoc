@@ -17,6 +17,8 @@
 			<cliente>
 				<nome>El Cabron</nome>
 			</cliente>
+			<cliente>
+				<nome>Juan Valdez</nome></cliente>
 		</clientes>
 		<medicos>
 			<medico>
@@ -40,6 +42,42 @@
 				<especialidade>Cardiologia</especialidade>
 			</medico>
 		</medicos>
+		<funcionarios>
+			<funcionario>
+				<nome>Zelha</nome>
+				<cargo>Administrativo</cargo>
+			</funcionario>
+			<funcionario>
+				<nome>Duncan</nome>
+				<cargo>Financeiro</cargo>
+			</funcionario>
+			<funcionario>
+				<nome>El Perone del Nacho</nome>
+				<cargo>Marketing</cargo>
+			</funcionario>
+			<funcionario>
+				<nome>Jorge Ben</nome>
+				<cargo>CEO</cargo>
+			</funcionario>
+		</funcionarios>
+		<tecnicos>
+			<tecnico>
+				<nome>X-man</nome>
+				<especialidade>Raio X</especialidade>
+			</tecnico>
+			<tecnico>
+				<nome>Cara do sangue</nome>
+				<especialidade>Exame de Sangue</especialidade>
+			</tecnico>
+			<tecnico>
+				<nome>Fermara</nome>
+				<especialidade>Raio X</especialidade>
+			</tecnico>
+			<tecnico>
+				<nome>Don Corleone</nome>
+				<especialidade>Exame de Sangue</especialidade>
+			</tecnico>
+		</tecnicos>
 	</pessoas>
 	<exames>
 		<exame>
