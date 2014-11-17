@@ -116,6 +116,16 @@ public class Listas {
 		for (Pessoa p : getPessoas()) {
 			s = s + p.getId() + " " + p.toString() + "\n";
 		}
+		
+		s = s + "\n Exames\n";
+		for (Exame e : getExames()){
+			s = s + e.toString() + "\n";
+		}
+		
+		s = s + "\n Consultas\n";
+		for (Consulta c : getConsultas()){
+			s = s + c.toString() + "\n";
+		}
 
 		return s;
 	}

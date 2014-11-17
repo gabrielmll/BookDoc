@@ -99,9 +99,14 @@
 	</exames>
 	<consultas>
 		<consulta>
-			<data></data>
-			<idMedico></idMedico>
-			<idCliente></idCliente>
+			<data>201411150900</data>
+			<idMedico>1</idMedico>
+			<idCliente>1</idCliente>
+		</consulta>
+		<consulta>
+			<data>201411150900</data>
+			<idMedico>2</idMedico>
+			<idCliente>3</idCliente>
 		</consulta>
 	</consultas>
 </listas>

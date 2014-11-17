@@ -10,8 +10,8 @@ package Sistema;
 public class Consulta {
 	private Medico medico;
 	private Cliente cliente;
-	
-	public Consulta(Medico medico, Cliente cliente){
+
+	public Consulta(Medico medico, Cliente cliente) {
 		this.medico = medico;
 		this.cliente = cliente;
 	}
@@ -26,5 +26,9 @@ public class Consulta {
 
 	public Cliente getCliente() {
 		return cliente;
-	}	
+	}
+
+	public String toString() {
+		return "Medico " + medico.toString() + " consulta " + cliente.toString() + " na data ";
+	}
 }
