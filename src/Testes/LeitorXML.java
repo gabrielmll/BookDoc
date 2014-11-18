@@ -127,11 +127,13 @@ public class LeitorXML {
 			List<Element> exame = e.getChildren("exame");
 
 			for (Element cadaExame : exame) {
+				String nome = cadaExame.getChildText("nome");
 				Cliente c = (Cliente) sis.getListas().getClienteById(
 						Integer.parseInt(cadaExame.getChildText("idCliente")));
-				if (c != null) {
-					sis.addExame(new Exame(c));
-				}
+
+				// int data = Integer.parseInt(cadaExame.getChildText("data"));
+				int tipo = Integer.parseInt(cadaExame.getChildText("tipo"));
+				sis.addExame(new Exame(nome, c, 0, tipo));
 			}
 		}
 	}
@@ -150,10 +152,11 @@ public class LeitorXML {
 								Integer.parseInt(cadaConsulta
 										.getChildText("idMedico")));
 
-				//int data = Integer.parseInt(cadaConsulta.getChildText("data"));
+				// int data =
+				// Integer.parseInt(cadaConsulta.getChildText("data"));
 				int tipo = Integer.parseInt(cadaConsulta.getChildText("tipo"));
-				
-				sis.addConsulta(new Consulta(md, cl, 1, tipo));
+
+				sis.addConsulta(new Consulta(md, cl, 0, tipo));
 
 			}
 		}

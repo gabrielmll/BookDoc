@@ -12,10 +12,6 @@ public class Consulta {
 	private Cliente cliente;
 	private int data;
 	private int tipo;
-	
-	public static int CORTESIA = 1;
-	public static int PARTICULAR = 2;
-	public static int CONVENIO = 3;
 
 	public Consulta(Medico medico, Cliente cliente, int data, int tipo) {
 		this.medico = medico;

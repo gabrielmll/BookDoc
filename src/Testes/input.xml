@@ -81,18 +81,26 @@
 	</pessoas>
 	<exames>
 		<exame>
+			<nome>Raio-x</nome>
+			<tipo>1</tipo>
 			<data>201411150900</data>
 			<idCliente>1</idCliente>
 		</exame>
 		<exame>
+			<nome>Raio-x</nome>
+			<tipo>1</tipo>
 			<data>201411150900</data>
 			<idCliente>1</idCliente>
 		</exame>
 		<exame>
+			<nome>Raio-x</nome>
+			<tipo>1</tipo>
 			<data>201411150900</data>
 			<idCliente>1</idCliente>
 		</exame>
 		<exame>
+			<nome>Raio-x</nome>
+			<tipo>1</tipo>
 			<data>201411150900</data>
 			<idCliente>1</idCliente>
 		</exame>
