@@ -84,9 +84,10 @@ public class LeitorXML {
 					String endereco = individuo.getChildText("endereco");
 					String telefone = individuo.getChildText("telefone");
 					String nascimento = individuo.getChildText("nascimento");
+					String senha = individuo.getChildText("senha");
 
 					Cliente c = new Cliente(0, criaPessoa(nome, identidade,
-							cpf, endereco, telefone, nascimento));
+							cpf, endereco, telefone, nascimento), senha);
 
 					sis.addPessoa(c);
 				}

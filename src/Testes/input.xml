@@ -12,6 +12,7 @@
 				<endereco>Rua Aur, 555</endereco>
 				<telefone>3278-7591</telefone>
 				<nascimento>19831012</nascimento>
+				<senha>1</senha>
 			</cliente>
 			<cliente>
 				<nome>Juca Batista</nome>
@@ -20,6 +21,7 @@
 				<endereco>Rua Aur, 555</endereco>
 				<telefone>3278-7591</telefone>
 				<nascimento>19831012</nascimento>
+				<senha>1</senha>
 			</cliente>
 			<cliente>
 				<nome>Tiao Maravilha</nome>
@@ -28,6 +30,7 @@
 				<endereco>Rua Aur, 555</endereco>
 				<telefone>3278-7591</telefone>
 				<nascimento>19831012</nascimento>
+				<senha>1</senha>
 			</cliente>
 			<cliente>
 				<nome>El Cabron</nome>
@@ -36,6 +39,7 @@
 				<endereco>Rua Aur, 555</endereco>
 				<telefone>3278-7591</telefone>
 				<nascimento>19831012</nascimento>
+				<senha>1</senha>
 			</cliente>
 			<cliente>
 				<nome>Juan Valdez</nome>
@@ -44,6 +48,7 @@
 				<endereco>Rua Aur, 555</endereco>
 				<telefone>3278-7591</telefone>
 				<nascimento>19831012</nascimento>
+				<senha>1</senha>
 			</cliente>
 		</clientes>
 		<medicos>
