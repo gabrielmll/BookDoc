@@ -102,11 +102,13 @@
 			<data>201411150900</data>
 			<idMedico>1</idMedico>
 			<idCliente>1</idCliente>
+			<tipo>1</tipo>
 		</consulta>
 		<consulta>
 			<data>201411150900</data>
 			<idMedico>2</idMedico>
 			<idCliente>3</idCliente>
+			<tipo>1</tipo>
 		</consulta>
 	</consultas>
 </listas>

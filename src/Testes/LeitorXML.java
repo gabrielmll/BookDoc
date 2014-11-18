@@ -18,7 +18,7 @@ import Sistema.Sistema;
 import Sistema.Tecnico;
 
 public class LeitorXML {
-	
+
 	public static void populaSistema() {
 		File f = new File("src/Testes/input.xml");
 		Sistema sis;
@@ -149,9 +149,12 @@ public class LeitorXML {
 						.getMedicoById(
 								Integer.parseInt(cadaConsulta
 										.getChildText("idMedico")));
-				if (cl != null) {
-					sis.addConsulta(new Consulta(md, cl));
-				}
+
+				//int data = Integer.parseInt(cadaConsulta.getChildText("data"));
+				int tipo = Integer.parseInt(cadaConsulta.getChildText("tipo"));
+				
+				sis.addConsulta(new Consulta(md, cl, 1, tipo));
+
 			}
 		}
 	}
