@@ -9,13 +9,7 @@ import org.jdom2.Element;
 import org.jdom2.JDOMException;
 import org.jdom2.input.SAXBuilder;
 
-import Sistema.Cliente;
-import Sistema.Consulta;
-import Sistema.Exame;
-import Sistema.Funcionario;
-import Sistema.Medico;
-import Sistema.Sistema;
-import Sistema.Tecnico;
+import Sistema.*;
 
 public class LeitorXML {
 
@@ -65,6 +59,14 @@ public class LeitorXML {
 		return sis;
 	}
 
+	private static Pessoa criaPessoa(String nome, String identidade,
+			String cpf, String endereco, String telefone, String nascimento) {
+		Pessoa p = new Pessoa(nome, identidade, cpf, endereco, telefone,
+				nascimento);
+
+		return p;
+	}
+
 	public static void populaPessoas(Sistema sis, List<Element> pessoas) {
 
 		for (Element p : pessoas) {
@@ -75,7 +77,17 @@ public class LeitorXML {
 				List<Element> cliente = cs.getChildren("cliente");
 
 				for (Element individuo : cliente) {
-					Cliente c = new Cliente(0, individuo.getChildText("nome"));
+
+					String nome = individuo.getChildText("nome");
+					String identidade = individuo.getChildText("identidade");
+					String cpf = individuo.getChildText("cpf");
+					String endereco = individuo.getChildText("endereco");
+					String telefone = individuo.getChildText("telefone");
+					String nascimento = individuo.getChildText("nascimento");
+
+					Cliente c = new Cliente(0, criaPessoa(nome, identidade,
+							cpf, endereco, telefone, nascimento));
+
 					sis.addPessoa(c);
 				}
 			}
@@ -87,8 +99,19 @@ public class LeitorXML {
 				List<Element> medico = ms.getChildren("medico");
 
 				for (Element individuo : medico) {
-					Medico m = new Medico(0, individuo.getChildText("nome"),
-							individuo.getChildText("especialidade"));
+
+					String nome = individuo.getChildText("nome");
+					String identidade = individuo.getChildText("identidade");
+					String cpf = individuo.getChildText("cpf");
+					String endereco = individuo.getChildText("endereco");
+					String telefone = individuo.getChildText("telefone");
+					String nascimento = individuo.getChildText("nascimento");
+					String especialidade = individuo
+							.getChildText("especialidade");
+
+					Medico m = new Medico(0, criaPessoa(nome, identidade, cpf,
+							endereco, telefone, nascimento), especialidade);
+
 					sis.addPessoa(m);
 				}
 			}
@@ -100,8 +123,19 @@ public class LeitorXML {
 				List<Element> tecnico = ts.getChildren("tecnico");
 
 				for (Element individuo : tecnico) {
-					Tecnico t = new Tecnico(0, individuo.getChildText("nome"),
-							individuo.getChildText("especialidade"));
+
+					String nome = individuo.getChildText("nome");
+					String identidade = individuo.getChildText("identidade");
+					String cpf = individuo.getChildText("cpf");
+					String endereco = individuo.getChildText("endereco");
+					String telefone = individuo.getChildText("telefone");
+					String nascimento = individuo.getChildText("nascimento");
+					String especialidade = individuo
+							.getChildText("especialidade");
+
+					Tecnico t = new Tecnico(0, criaPessoa(nome, identidade,
+							cpf, endereco, telefone, nascimento), especialidade);
+
 					sis.addPessoa(t);
 				}
 			}
@@ -113,9 +147,19 @@ public class LeitorXML {
 				List<Element> funcionario = fs.getChildren("funcionario");
 
 				for (Element individuo : funcionario) {
-					Funcionario f = new Funcionario(0,
-							individuo.getChildText("nome"),
-							individuo.getChildText("cargo"));
+
+					String nome = individuo.getChildText("nome");
+					String identidade = individuo.getChildText("identidade");
+					String cpf = individuo.getChildText("cpf");
+					String endereco = individuo.getChildText("endereco");
+					String telefone = individuo.getChildText("telefone");
+					String nascimento = individuo.getChildText("nascimento");
+					String cargo = individuo.getChildText("cargo");
+
+					Funcionario f = new Funcionario(0, criaPessoa(nome,
+							identidade, cpf, endereco, telefone, nascimento),
+							cargo);
+
 					sis.addPessoa(f);
 				}
 			}

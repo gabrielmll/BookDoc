@@ -11,8 +11,16 @@ public class Medico extends Pessoa {
 	int id;
 	private String especialidade;
 
-	public Medico(int id, String nome, String especialidade) {
-		super(nome);
+	public Medico(int id, String especialidade, String nome, String identidade,
+			String cpf, String endereco, String telefone, String nascimento) {
+		super(nome, identidade, cpf, endereco, telefone, nascimento);
+		this.id = id;
+		this.especialidade = especialidade;
+	}
+
+	public Medico(int id, Pessoa p, String especialidade) {
+		super(p.getNome(), p.getIdentidade(), p.getCpf(), p.getEndereco(), p
+				.getTelefone(), p.getNascimento());
 		this.id = id;
 		this.especialidade = especialidade;
 	}
@@ -24,8 +32,8 @@ public class Medico extends Pessoa {
 	public void setId(int id) {
 		this.id = id;
 	}
-	
-	public int getId(){
+
+	public int getId() {
 		return this.id;
 	}
 }

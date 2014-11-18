@@ -7,75 +7,166 @@
 		<clientes>
 			<cliente>
 				<nome>Jao Chaves</nome>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
 			</cliente>
 			<cliente>
 				<nome>Juca Batista</nome>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
 			</cliente>
 			<cliente>
 				<nome>Tiao Maravilha</nome>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
 			</cliente>
 			<cliente>
 				<nome>El Cabron</nome>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
 			</cliente>
 			<cliente>
-				<nome>Juan Valdez</nome></cliente>
+				<nome>Juan Valdez</nome>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
+			</cliente>
 		</clientes>
 		<medicos>
 			<medico>
 				<nome>Dr. Rey</nome>
 				<especialidade>Plastica</especialidade>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
 			</medico>
 			<medico>
 				<nome>Dra. La Rousse</nome>
 				<especialidade>Testa</especialidade>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
 			</medico>
 			<medico>
 				<nome>Dr. Rodney</nome>
 				<especialidade>Plastica</especialidade>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
 			</medico>
 			<medico>
 				<nome>Dra. Maria Joana</nome>
 				<especialidade>Psicologia</especialidade>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
 			</medico>
 			<medico>
 				<nome>Dr. Dalai Lama</nome>
 				<especialidade>Cardiologia</especialidade>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
 			</medico>
 		</medicos>
 		<funcionarios>
 			<funcionario>
 				<nome>Zelha</nome>
 				<cargo>Administrativo</cargo>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
 			</funcionario>
 			<funcionario>
 				<nome>Duncan</nome>
 				<cargo>Financeiro</cargo>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
 			</funcionario>
 			<funcionario>
 				<nome>El Perone del Nacho</nome>
 				<cargo>Marketing</cargo>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
 			</funcionario>
 			<funcionario>
 				<nome>Jorge Ben</nome>
 				<cargo>CEO</cargo>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
 			</funcionario>
 		</funcionarios>
 		<tecnicos>
 			<tecnico>
 				<nome>X-man</nome>
 				<especialidade>Raio X</especialidade>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
 			</tecnico>
 			<tecnico>
 				<nome>Cara do sangue</nome>
 				<especialidade>Exame de Sangue</especialidade>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
 			</tecnico>
 			<tecnico>
 				<nome>Fermara</nome>
 				<especialidade>Raio X</especialidade>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
 			</tecnico>
 			<tecnico>
 				<nome>Don Corleone</nome>
 				<especialidade>Exame de Sangue</especialidade>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
 			</tecnico>
 		</tecnicos>
 	</pessoas>
