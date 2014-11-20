@@ -33,7 +33,7 @@ public class EntidadeExterna {
 	 * 
 	 * @return sempre true - autorizado
 	 */
-	private static boolean pagamentoCartao() {
+	public static boolean pagamentoCartao() {
 		return true;
 	}
 
@@ -44,7 +44,7 @@ public class EntidadeExterna {
 	 * 
 	 * @return true para autorizado ou false para recusado
 	 */
-	private static boolean operadoraAtuorizaConvenio() {
+	public static boolean operadoraAtuorizaConvenio() {
 		if (percentagemAleatoria(90)) {
 			return sorteio();
 		}
@@ -57,7 +57,7 @@ public class EntidadeExterna {
 	 * 
 	 * @return sempre true
 	 */
-	private static boolean pagamentoDinheiro() {
+	public static boolean pagamentoDinheiro() {
 		return true;
 	}
 
