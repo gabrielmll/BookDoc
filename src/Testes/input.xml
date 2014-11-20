@@ -181,24 +181,28 @@
 			<tipo>1</tipo>
 			<data>201411150900</data>
 			<idCliente>1</idCliente>
+			<tipoPagamento>Cortesia</tipoPagamento>
 		</exame>
 		<exame>
 			<nome>Raio-x</nome>
 			<tipo>1</tipo>
 			<data>201411150900</data>
 			<idCliente>1</idCliente>
+			<tipoPagamento>Cheque</tipoPagamento>
 		</exame>
 		<exame>
 			<nome>Raio-x</nome>
 			<tipo>1</tipo>
 			<data>201411150900</data>
 			<idCliente>1</idCliente>
+			<tipoPagamento>Cartao</tipoPagamento>
 		</exame>
 		<exame>
 			<nome>Raio-x</nome>
 			<tipo>1</tipo>
 			<data>201411150900</data>
 			<idCliente>1</idCliente>
+			<tipoPagamento>Convenio</tipoPagamento>
 		</exame>
 	</exames>
 	<consultas>
@@ -207,12 +211,14 @@
 			<idMedico>1</idMedico>
 			<idCliente>1</idCliente>
 			<tipo>1</tipo>
+			<tipoPagamento>Dinheiro</tipoPagamento>
 		</consulta>
 		<consulta>
 			<data>201411150900</data>
 			<idMedico>2</idMedico>
 			<idCliente>3</idCliente>
 			<tipo>1</tipo>
+			<tipoPagamento>Cortesia</tipoPagamento>
 		</consulta>
 	</consultas>
 </listas>
