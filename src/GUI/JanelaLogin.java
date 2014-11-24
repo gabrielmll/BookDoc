@@ -9,7 +9,7 @@ import javax.swing.JButton;
 
 public class JanelaLogin {
 
-	private JFrame frame;
+	public static JFrame frame;
 	protected static JTextField senhaLogin;
 	protected static JTextField idLogin;
 
@@ -75,5 +75,10 @@ public class JanelaLogin {
 		entrarLogin.setBounds(116, 92, 89, 23);
 		entrarLogin.addActionListener(manipulador);
 		frame.getContentPane().add(entrarLogin);
+		
+		JButton cadastrar = new JButton("Cadastrar");
+		cadastrar.setBounds(111, 126, 100, 23);
+		cadastrar.addActionListener(manipulador);
+		frame.getContentPane().add(cadastrar);
 	}
 }

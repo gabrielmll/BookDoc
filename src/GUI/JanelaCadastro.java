@@ -15,7 +15,7 @@ import javax.swing.JPasswordField;
 
 public class JanelaCadastro extends JFrame {
 
-	private JPanel contentPane;
+	public static JPanel contentPane;
 	protected static JLabel labelID;
 	protected static JTextField textNome;
 	protected static JTextField textIdentidade;
@@ -173,7 +173,7 @@ public class JanelaCadastro extends JFrame {
 
 		JButton btnCadastrar = new JButton("Cadastrar");
 		btnCadastrar.setBounds(526, 434, 89, 23);
-		btnLimpar.addActionListener(manipulador);
+		btnCadastrar.addActionListener(manipulador);
 		panel.add(btnCadastrar);
 	}
 }

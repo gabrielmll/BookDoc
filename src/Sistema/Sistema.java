@@ -16,7 +16,7 @@ public class Sistema {
 		listas = new Listas();
 	}
 
-	public Listas getListas() {
+	public static Listas getListas() {
 		return listas;
 	}
 
@@ -32,8 +32,8 @@ public class Sistema {
 		this.clinica = clinica;
 	}
 
-	public void addPessoa(Pessoa p) {
-		this.listas.addOject(p);
+	public static void addPessoa(Pessoa p) {
+		listas.addOject(p);
 	}
 
 	public void addExame(Exame e) {
