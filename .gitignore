@@ -13,4 +13,4 @@ hs_err_pid*
 /bin
 
 # Não ignorar a biblioteca JDOM
-!/lib/*
+!/lib/*.jar
