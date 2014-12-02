@@ -31,6 +31,7 @@ public class EventoCadastro implements ActionListener {
 			Cliente c = new Cliente(-1, nome, identidade, cpf, end, tel, nasc,
 					pass);
 
+			Sistema.addPessoa(c);
 			Sistema.getListas().toString();
 		}
 
