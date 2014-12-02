@@ -2,7 +2,9 @@ package GUI;
 
 import java.awt.BorderLayout;
 import java.awt.Component;
+import java.awt.Container;
 import java.awt.EventQueue;
+import java.awt.FlowLayout;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -23,6 +25,7 @@ import java.util.Date;
 import java.util.Properties;
 
 import Sistema.Listas;
+
 import javax.swing.SpringLayout;
 
 @SuppressWarnings({ "serial", "unused" })
@@ -117,6 +120,15 @@ public class JanelaExame extends JFrame {
 		JComboBox comboTipoExame = new JComboBox(tipoExame);
 		comboTipoExame.setBounds(10, 128, 284, 20);
 		panel.add(comboTipoExame);
+		
+	    JFrame calendarFrame = new JFrame("Calendario");
+	    calendarFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	    Container container = calendarFrame.getContentPane();
+	    container.setLayout(new FlowLayout());
+	    container.add(new Cal());
+	    calendarFrame.pack();
+	    calendarFrame.setVisible(true);
+	    //this.add(calendarFrame);
 		
 		JLabel labelHora = new JLabel("Hora");
 		labelHora.setHorizontalAlignment(SwingConstants.LEFT);
