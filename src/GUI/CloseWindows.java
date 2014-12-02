@@ -19,8 +19,8 @@ public class CloseWindows implements WindowListener {
 
 	@Override
 	public void windowClosing(WindowEvent e) {
-		System.out.println("Fechaduuuuu");
-		
+		Testes.EscritorXML.criarXML();
+		System.exit(0);
 	}
 
 	@Override
