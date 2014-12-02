@@ -18,10 +18,6 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 
-import org.jdatepicker.impl.JDatePanelImpl;
-import org.jdatepicker.impl.JDatePickerImpl;
-import org.jdatepicker.impl.UtilDateModel;
-
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Properties;
@@ -34,14 +30,12 @@ import javax.swing.SpringLayout;
 public class JanelaExame extends JFrame {
 	
 	public static JPanel contentPane;
-	protected static JTextField textNome;
-	protected static JTextField textIdentidade;
-	protected static JTextField textCPF;
-	protected static JTextField textEndereco;
-	protected static JTextField textTel;
-	protected static JTextField textNascimento;
-	protected static JPasswordField passwordField;
-	protected static JPasswordField confPasswordField;
+	protected static JPanel panel;
+	protected static JLabel labelCadastro;
+	protected static JLabel labelTipo;
+	protected static JLabel labelFormaPagamento;
+	protected static JLabel labelExame;
+	protected static JLabel labelData;
 	private SpringLayout springLayout;
 
 	/**
@@ -74,35 +68,35 @@ public class JanelaExame extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
-		JPanel panel = new JPanel();
+		panel = new JPanel();
 		panel.setBounds(0, 0, 320, 298);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
-		JLabel lblCadastro = new JLabel("AGENDAR EXAME");
-		lblCadastro.setBounds(5, 6, 320, 36);
-		panel.add(lblCadastro);
-		lblCadastro.setFont(new Font("Times New Roman", Font.BOLD, 33));
+		labelCadastro = new JLabel("AGENDAR EXAME");
+		labelCadastro.setBounds(5, 6, 320, 36);
+		panel.add(labelCadastro);
+		labelCadastro.setFont(new Font("Times New Roman", Font.BOLD, 33));
 
-		JLabel labelTipo = new JLabel("Tipo");
+		labelTipo = new JLabel("Tipo");
 		labelTipo.setBounds(20, 54, 50, 20);
 		labelTipo.setHorizontalAlignment(SwingConstants.LEFT);
 		labelTipo.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		panel.add(labelTipo);
 		
-		JLabel labelFormaPagamento = new JLabel("Forma de Pagamento");
+		labelFormaPagamento = new JLabel("Forma de Pagamento");
 		labelFormaPagamento.setBounds(162, 54, 132, 20);
 		labelFormaPagamento.setHorizontalAlignment(SwingConstants.LEFT);
 		labelFormaPagamento.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		panel.add(labelFormaPagamento);
 		
-		JLabel labelExame = new JLabel("Exame");
+		labelExame = new JLabel("Exame");
 		labelExame.setHorizontalAlignment(SwingConstants.LEFT);
 		labelExame.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		labelExame.setBounds(20, 107, 50, 20);
 		panel.add(labelExame);
 
-		JLabel labelData = new JLabel("Escolha uma data");
+		labelData = new JLabel("Escolha uma data");
 		labelData.setHorizontalAlignment(SwingConstants.LEFT);
 		labelData.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		labelData.setBounds(20, 160, 100, 20);
@@ -123,17 +117,6 @@ public class JanelaExame extends JFrame {
 		comboTipoExame.setBounds(10, 128, 284, 20);
 		panel.add(comboTipoExame);
 		
-		UtilDateModel model = new UtilDateModel();
-		//model.setDate(2014, 12, 02);
-		Properties p = new Properties();
-		p.put("text.today", "Hoje");
-		p.put("text.month", "Mês");
-		p.put("text.year", "Ano");
-		JDatePanelImpl datePanel = new JDatePanelImpl(model, p);
-		JDatePickerImpl datePicker = new JDatePickerImpl(datePanel, null);
-		datePicker.setBounds(15, 180, 200, 30);
-		panel.add(datePicker);
-		
 		JLabel labelHora = new JLabel("Hora");
 		labelHora.setHorizontalAlignment(SwingConstants.LEFT);
 		labelHora.setFont(new Font("Tahoma", Font.PLAIN, 12));
@@ -145,19 +128,19 @@ public class JanelaExame extends JFrame {
 		textHora.setBounds(230, 184, 50, 20);
 		panel.add(textHora);
 
-		JLabel lblCamposObrigatrios = new JLabel("* Campos obrigat\u00F3rios");
-		lblCamposObrigatrios.setBounds(11, 216, 161, 14);
-		panel.add(lblCamposObrigatrios);
+		JLabel labelCamposObrigatrios = new JLabel("* Campos obrigat\u00F3rios");
+		labelCamposObrigatrios.setBounds(11, 216, 161, 14);
+		panel.add(labelCamposObrigatrios);
 		
-		JButton btnLimpar = new JButton("Limpar");
-		btnLimpar.setBounds(48, 252, 89, 23);
-		btnLimpar.addActionListener(manipulador);
-		panel.add(btnLimpar);
+		JButton buttonLimpar = new JButton("Limpar");
+		buttonLimpar.setBounds(48, 252, 89, 23);
+		buttonLimpar.addActionListener(manipulador);
+		panel.add(buttonLimpar);
 
-		JButton btnCadastrar = new JButton("Agendar");
-		btnCadastrar.setBounds(173, 251, 89, 23);
-		btnCadastrar.addActionListener(manipulador);
-		panel.add(btnCadastrar);
+		JButton buttonCadastrar = new JButton("Agendar");
+		buttonCadastrar.setBounds(173, 251, 89, 23);
+		buttonCadastrar.addActionListener(manipulador);
+		panel.add(buttonCadastrar);
 		
 	}
 }
