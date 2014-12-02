@@ -99,6 +99,8 @@ public class Cal extends JPanel {
         "Calendar not accessible yet. Sorry!");
     setBorder(BorderFactory.createEtchedBorder());
 
+    setBounds(0, 0, 300, 300);
+    
     setLayout(new BorderLayout());
 
     JPanel tp = new JPanel();
@@ -375,6 +377,7 @@ public class Cal extends JPanel {
   /** For testing, a main program */
   public static void main(String[] av) {
     JFrame f = new JFrame("Cal");
+    f.setSize(300, 300);
     f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     Container c = f.getContentPane();
     c.setLayout(new FlowLayout());
