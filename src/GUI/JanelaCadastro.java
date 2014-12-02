@@ -53,6 +53,7 @@ public class JanelaCadastro extends JFrame {
 	public JanelaCadastro() {
 
 		EventoCadastro manipulador = new EventoCadastro();
+		CloseWindows closer = new CloseWindows();
 
 		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		setBounds(100, 100, 1000, 600);
@@ -181,6 +182,6 @@ public class JanelaCadastro extends JFrame {
 		btnCadastrar.addActionListener(manipulador);
 		panel.add(btnCadastrar);
 	
-		addWindowListener(manipulador);
+		addWindowListener(closer);
 	}
 }
