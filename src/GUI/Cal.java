@@ -90,8 +90,8 @@ public class Cal extends JPanel {
     dd = today;
   }
 
-  String[] months = { "January", "February", "March", "April", "May", "June",
-      "July", "August", "September", "October", "November", "December" };
+  String[] months = { "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+      "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro" };
 
   /** Build the GUI. Assumes that setYYMMDD has been called. */
   private void buildGUI() {
@@ -118,7 +118,7 @@ public class Cal extends JPanel {
         }
       }
     });
-    monthChoice.getAccessibleContext().setAccessibleName("Months");
+    monthChoice.getAccessibleContext().setAccessibleName("Meses");
     monthChoice.getAccessibleContext().setAccessibleDescription(
         "Choose a month of the year");
 
@@ -177,6 +177,13 @@ public class Cal extends JPanel {
     
     JPanel tcp = new JPanel();
     tcp.add(timeChoice = new JComboBox());
+    String[] time = { "8:00", "8:30", "9:00", "9:30", "10:00", "10:30",
+    	      "11:00", "11:30", "12:00", "12:30", "13:00", "13:30",
+    	      "14:00", "14:30", "15:00", "15:30", "16:00", "16:30"};
+    for (int i = 0; i < time.length; i++)
+    {
+      timeChoice.addItem(time[i]);
+    }
     add(BorderLayout.EAST, tcp);
     
   }
