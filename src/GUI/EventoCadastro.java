@@ -2,13 +2,14 @@ package GUI;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 
 import Sistema.*;
 import Testes.LeitorXML;
-
 import Sistema.Sistema;
 
-public class EventoCadastro implements ActionListener {
+public class EventoCadastro implements ActionListener, WindowListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -27,9 +28,10 @@ public class EventoCadastro implements ActionListener {
 			System.out.println(id + "\n" + nome + "\n" + identidade + "\n"
 					+ cpf + "\n" + end + "\n" + tel + "\n" + nasc + "\n" + pass
 					+ "\n" + pass2);
-			
-			Cliente c = new Cliente(-1, nome, identidade, cpf, end, tel, nasc, pass);
-			
+
+			Cliente c = new Cliente(-1, nome, identidade, cpf, end, tel, nasc,
+					pass);
+
 			Sistema.getListas().toString();
 		}
 
@@ -45,5 +47,47 @@ public class EventoCadastro implements ActionListener {
 			JanelaCadastro.passwordField.setText("");
 			JanelaCadastro.confPasswordField.setText("");
 		}
+	}
+
+	@Override
+	public void windowActivated(WindowEvent arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowClosed(WindowEvent arg0) {
+
+	}
+
+	@Override
+	public void windowClosing(WindowEvent arg0) {
+		// TODO Auto-generated method stub
+		System.out.println("Fechaduuuuu");
+
+	}
+
+	@Override
+	public void windowDeactivated(WindowEvent arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowDeiconified(WindowEvent arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowIconified(WindowEvent arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowOpened(WindowEvent arg0) {
+		// TODO Auto-generated method stub
+
 	}
 }

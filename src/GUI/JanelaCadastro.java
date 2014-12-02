@@ -7,7 +7,10 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+
 import java.awt.Font;
+import java.awt.event.WindowListener;
+
 import javax.swing.SwingConstants;
 import javax.swing.JButton;
 import javax.swing.JTextField;
@@ -49,7 +52,7 @@ public class JanelaCadastro extends JFrame {
 
 		EventoCadastro manipulador = new EventoCadastro();
 
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		setBounds(100, 100, 1000, 600);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -175,5 +178,7 @@ public class JanelaCadastro extends JFrame {
 		btnCadastrar.setBounds(526, 434, 89, 23);
 		btnCadastrar.addActionListener(manipulador);
 		panel.add(btnCadastrar);
+	
+		addWindowListener(manipulador);
 	}
 }

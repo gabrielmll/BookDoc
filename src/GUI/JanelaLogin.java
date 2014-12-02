@@ -17,18 +17,18 @@ public class JanelaLogin {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		Testes.LeitorXML.populaSistema();
-		
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					JanelaLogin window = new JanelaLogin();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
+			Testes.LeitorXML.populaSistema();
+
+			EventQueue.invokeLater(new Runnable() {
+				public void run() {
+					try {
+						JanelaLogin window = new JanelaLogin();
+						window.frame.setVisible(true);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
 				}
-			}
-		});
+			});
 	}
 
 	/**
@@ -75,7 +75,7 @@ public class JanelaLogin {
 		entrarLogin.setBounds(116, 92, 89, 23);
 		entrarLogin.addActionListener(manipulador);
 		frame.getContentPane().add(entrarLogin);
-		
+
 		JButton cadastrar = new JButton("Cadastrar");
 		cadastrar.setBounds(111, 126, 100, 23);
 		cadastrar.addActionListener(manipulador);
