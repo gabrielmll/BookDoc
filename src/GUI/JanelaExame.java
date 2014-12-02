@@ -60,6 +60,7 @@ public class JanelaExame extends JFrame {
 	public JanelaExame() {
 
 		EventoCadastro manipulador = new EventoCadastro();
+		CloseWindows closer = new CloseWindows();
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 320, 320);
@@ -142,5 +143,6 @@ public class JanelaExame extends JFrame {
 		buttonCadastrar.addActionListener(manipulador);
 		panel.add(buttonCadastrar);
 		
+		addWindowListener(closer);
 	}
 }
