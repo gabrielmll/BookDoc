@@ -1,5 +1,5 @@
 /**
- * Medico é uma pessoa que realiza consultas dependendo de sua especialidade e disponibilidade de agenda.
+ * Medico ï¿½ uma pessoa que realiza consultas dependendo de sua especialidade e disponibilidade de agenda.
  */
 package Sistema;
 
@@ -10,6 +10,7 @@ package Sistema;
 public class Medico extends Pessoa {
 	int id;
 	private String especialidade;
+	private Agenda agendaMedico; 
 
 	public Medico(int id, String especialidade, String nome, String identidade,
 			String cpf, String endereco, String telefone, String nascimento) {
@@ -23,6 +24,10 @@ public class Medico extends Pessoa {
 				.getTelefone(), p.getNascimento());
 		this.id = id;
 		this.especialidade = especialidade;
+	}
+
+	public Agenda getAgendaMedico() {
+		return agendaMedico;
 	}
 
 	public String getEspecialidade() {

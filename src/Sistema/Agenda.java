@@ -1,6 +1,6 @@
 
 /**
- * Classe que gerencia agendas. As disponibilidades de médicos e exames são guiados por uma agenda.
+ * Classe que gerencia agendas. As disponibilidades de mï¿½dicos e exames sï¿½o guiados por uma agenda.
  */
 package Sistema;
 
@@ -12,5 +12,9 @@ import java.util.Date;
  *
  */
 public class Agenda {
-	ArrayList<Date> horariosOcupados = new ArrayList<Date>();
+	ArrayList<String> horariosOcupados = new ArrayList<String>();
+	
+	public void addData(String data){
+		horariosOcupados.add(data);
+	}
 }

@@ -28,10 +28,10 @@ import javax.swing.JPanel;
  */
 public class Cal extends JPanel {
   /** The currently-interesting year (not modulo 1900!) */
-  protected static int yy;
+  private static int yy;
 
   /** Currently-interesting month and day */
-  protected static int mm, dd;
+  private static int mm, dd;
 
   /** The buttons to be displayed */
   protected JButton labs[][];
@@ -39,7 +39,7 @@ public class Cal extends JPanel {
   /** The number of day squares to leave blank at the start of this month */
   protected int leadGap = 0;
 
-  /** A Calendar object used throughout */
+/** A Calendar object used throughout */
   Calendar calendar = new GregorianCalendar();
 
   /** Today's year */
@@ -158,6 +158,9 @@ public class Cal extends JPanel {
         if (!num.equals("")) {
           // set the current day highlighted
           setDayActive(Integer.parseInt(num));
+          dd = Integer.parseInt(num);
+          mm = mm + 1; 
+          System.out.println(" "+yy +mm +dd);
           // When this becomes a Bean, you can
           // fire some kind of DateChanged event here.
           // Also, build a similar daySetter for day-of-week btns.
@@ -192,6 +195,8 @@ public class Cal extends JPanel {
   31, 30, 31, 31, /* may jun jul aug */
   30, 31, 30, 31 /* sep oct nov dec */
   };
+  
+  
 
   /** Compute which days to put where, in the Cal panel */
   protected void recompute() {
@@ -341,17 +346,41 @@ public class Cal extends JPanel {
     square.repaint();
     activeDay = newDay;
   }
+  
+
+  public static int getYy() {
+	  return yy;
+  }
+
+  public static void setYy(int yy) {
+		Cal.yy = yy;
+	}
+
+	public static int getMm() {
+		return mm;
+	}
+
+	public static void setMm(int mm) {
+		Cal.mm = mm;
+	}
+
+	public static int getDd() {
+		return dd;
+	}
+
+	public static void setDd(int dd) {
+		Cal.dd = dd;
+	}
 
   /** For testing, a main program */
   public static void main(String[] av) {
     JFrame f = new JFrame("Cal");
     f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    
     Container c = f.getContentPane();
     c.setLayout(new FlowLayout());
     c.add(new Cal());
-   
     f.pack();
     f.setVisible(true);
+    
   }
 }

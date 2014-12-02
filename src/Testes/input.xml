@@ -60,6 +60,13 @@
 				<endereco>Rua Aur, 555</endereco>
 				<telefone>3278-7591</telefone>
 				<nascimento>19831012</nascimento>
+				<datas>
+					<data>201412130931</data>
+					<data>201412130932</data>
+					<data>201412130933</data>
+					<data>201412130934</data>
+					<data>201412130935</data>
+				</datas>
 			</medico>
 			<medico>
 				<nome>Dra. La Rousse</nome>
@@ -69,6 +76,13 @@
 				<endereco>Rua Aur, 555</endereco>
 				<telefone>3278-7591</telefone>
 				<nascimento>19831012</nascimento>
+				<datas>
+					<data>201412130933</data>
+					<data>201412130900</data>
+					<data>201412130923</data>
+					<data>201412130943</data>
+					<data>201412130913</data>
+				</datas>
 			</medico>
 			<medico>
 				<nome>Dr. Rodney</nome>
@@ -78,6 +92,9 @@
 				<endereco>Rua Aur, 555</endereco>
 				<telefone>3278-7591</telefone>
 				<nascimento>19831012</nascimento>
+				<datas>
+					<data></data>
+				</datas>
 			</medico>
 			<medico>
 				<nome>Dra. Maria Joana</nome>
@@ -87,6 +104,14 @@
 				<endereco>Rua Aur, 555</endereco>
 				<telefone>3278-7591</telefone>
 				<nascimento>19831012</nascimento>
+				<datas>
+					<data>201412130930</data>
+					<data>201412130930</data>
+					<data>201412130930</data>
+					<data>201412130930</data>
+					<data>201412130930</data>
+				</datas>	
+			
 			</medico>
 			<medico>
 				<nome>Dr. Dalai Lama</nome>
@@ -96,6 +121,13 @@
 				<endereco>Rua Aur, 555</endereco>
 				<telefone>3278-7591</telefone>
 				<nascimento>19831012</nascimento>
+				<datas>
+					<data>201412130930</data>
+					<data>201412130930</data>
+					<data>201412130930</data>
+					<data>201412130930</data>
+					<data>201412130930</data>
+				</datas>
 			</medico>
 		</medicos>
 		<funcionarios>
