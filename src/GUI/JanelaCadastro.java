@@ -7,11 +7,15 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+
 import java.awt.Font;
+
 import javax.swing.SwingConstants;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
+
+@SuppressWarnings({ "serial", "unused" })
 
 public class JanelaCadastro extends JFrame {
 
@@ -62,7 +66,7 @@ public class JanelaCadastro extends JFrame {
 		panel.setLayout(null);
 
 		JLabel lblCadastro = new JLabel("CADASTRO");
-		lblCadastro.setBounds(0, 0, 168, 36);
+		lblCadastro.setBounds(0, 0, 175, 36);
 		contentPane.add(lblCadastro);
 		lblCadastro.setFont(new Font("Times New Roman", Font.BOLD, 30));
 
