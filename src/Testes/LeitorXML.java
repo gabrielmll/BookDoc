@@ -112,6 +112,15 @@ public class LeitorXML {
 
 					Medico m = new Medico(0, criaPessoa(nome, identidade, cpf,
 							endereco, telefone, nascimento), especialidade);
+					
+					Element datas = individuo.getChild("datas");
+					List<Element> ds = datas.getChildren("data");
+					System.out.println(ds);
+					for (Element data : ds){
+						String date = data.getValue();
+						m.getAgendaMedico().addData(date);
+						System.out.println(date);
+					}
 
 					sis.addPessoa(m);
 				}
