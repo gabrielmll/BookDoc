@@ -117,7 +117,7 @@ public class LeitorXML {
 					List<Element> ds = datas.getChildren("data");
 					for (Element data : ds){
 						String date = data.getValue();
-						m.getAgendaMedico().addData(date);
+						//m.getAgendaMedico().addData(date);
 					}
 
 					sis.addPessoa(m);
