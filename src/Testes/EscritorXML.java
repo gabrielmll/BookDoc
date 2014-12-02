@@ -25,35 +25,7 @@ public class EscritorXML {
 
 		listas.addContent(clinica);
 
-		Element pessoas = new Element("pessoas");
-		Element clientes = new Element("clientes");
-
-		for (Pessoa p : Sistema.getListas().getPessoas()) {
-			if (p instanceof Cliente) {
-				Element cliente = new Element("cliente");
-				
-				Element nome = new Element("nome").setText(p.getNome());
-				Element identidade = new Element("identidade").setText(p.getIdentidade());
-				Element cpf = new Element("cpf").setText(p.getCpf());
-				Element endereco = new Element("endereco").setText(p.getEndereco());
-				Element telefone = new Element("telefone").setText(p.getTelefone());
-				Element nascimento = new Element("nascimento").setText(p.getNascimento());
-				Element senha = new Element("senha").setText(((Cliente) p).getSenha());
-				
-				cliente.addContent(nome);
-				cliente.addContent(identidade);
-				cliente.addContent(cpf);
-				cliente.addContent(endereco);
-				cliente.addContent(telefone);
-				cliente.addContent(nascimento);
-				cliente.addContent(senha);
-				
-				clientes.addContent(cliente);
-			}
-		}
-		
-		pessoas.addContent(clientes);
-		listas.addContent(pessoas);
+		listas.addContent(criaPessoas());
 
 		try {
 			FileWriter arquivo = new FileWriter(new File(
@@ -64,5 +36,71 @@ public class EscritorXML {
 			e.printStackTrace();
 
 		}
+	}
+
+	private static Element criaPessoas() {
+		Element pessoas = new Element("pessoas");
+		Element clientes = new Element("clientes");
+		Element medicos = new Element("medicos");
+
+		for (Pessoa p : Sistema.getListas().getPessoas()) {
+			if (p instanceof Cliente) {
+				Element cliente = new Element("cliente");
+
+				Element nome = new Element("nome").setText(p.getNome());
+				Element identidade = new Element("identidade").setText(p
+						.getIdentidade());
+				Element cpf = new Element("cpf").setText(p.getCpf());
+				Element endereco = new Element("endereco").setText(p
+						.getEndereco());
+				Element telefone = new Element("telefone").setText(p
+						.getTelefone());
+				Element nascimento = new Element("nascimento").setText(p
+						.getNascimento());
+				Element senha = new Element("senha").setText(((Cliente) p)
+						.getSenha());
+
+				cliente.addContent(nome);
+				cliente.addContent(identidade);
+				cliente.addContent(cpf);
+				cliente.addContent(endereco);
+				cliente.addContent(telefone);
+				cliente.addContent(nascimento);
+				cliente.addContent(senha);
+
+				clientes.addContent(cliente);
+			}
+			if (p instanceof Medico) {
+				Element medico = new Element("medico");
+
+				Element nome = new Element("nome").setText(p.getNome());
+				Element identidade = new Element("identidade").setText(p
+						.getIdentidade());
+				Element cpf = new Element("cpf").setText(p.getCpf());
+				Element endereco = new Element("endereco").setText(p
+						.getEndereco());
+				Element telefone = new Element("telefone").setText(p
+						.getTelefone());
+				Element nascimento = new Element("nascimento").setText(p
+						.getNascimento());
+				Element especialidade = new Element("especialidade").setText(((Medico) p)
+						.getEspecialidade());
+
+				medico.addContent(nome);
+				medico.addContent(identidade);
+				medico.addContent(cpf);
+				medico.addContent(endereco);
+				medico.addContent(telefone);
+				medico.addContent(nascimento);
+				medico.addContent(especialidade);
+
+				medicos.addContent(medico);
+			}
+
+		}
+
+		pessoas.addContent(clientes);
+
+		return pessoas;
 	}
 }
