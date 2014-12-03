@@ -109,17 +109,21 @@ public class LeitorXML {
 					String nascimento = individuo.getChildText("nascimento");
 					String especialidade = individuo
 							.getChildText("especialidade");
+					
+					Agenda agendaMedico = new Agenda();
 
-					Medico m = new Medico(0, criaPessoa(nome, identidade, cpf,
-							endereco, telefone, nascimento), especialidade);
+					
 					
 					Element datas = individuo.getChild("datas");
 					List<Element> ds = datas.getChildren("data");
 					for (Element data : ds){
 						String date = data.getValue();
-						//m.getAgendaMedico().addData(date);
+						agendaMedico.addData(date);
 					}
-
+					
+					Medico m = new Medico(0, criaPessoa(nome, identidade, cpf,
+							endereco, telefone, nascimento), especialidade, agendaMedico);
+					
 					sis.addPessoa(m);
 				}
 			}
