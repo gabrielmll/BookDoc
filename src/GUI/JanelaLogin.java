@@ -1,11 +1,17 @@
 package GUI;
 
 import java.awt.EventQueue;
+import java.awt.Font;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import javax.swing.JPanel;
+import java.awt.FlowLayout;
+import javax.swing.UIManager;
+import javax.swing.border.EmptyBorder;
+import java.awt.Color;
 
 public class JanelaLogin {
 
@@ -43,7 +49,7 @@ public class JanelaLogin {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 300, 200);
+		frame.setBounds(100, 100, 1000, 600);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 
@@ -52,33 +58,49 @@ public class JanelaLogin {
 
 	private void telaLogin() {
 		EventoLogin manipulador = new EventoLogin();
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(Color.WHITE);
+		panel.setBounds(400, 189, 200, 200);
+		frame.getContentPane().add(panel);
+		panel.setLayout(null);
 
-		JLabel lblId = new JLabel("ID:");
-		lblId.setBounds(60, 33, 46, 14);
-		frame.getContentPane().add(lblId);
+		JLabel labelId = new JLabel("Identificador");
+		labelId.setBounds(25, 44, 68, 15);
+		labelId.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		panel.add(labelId);
 
 		idLogin = new JTextField();
-		idLogin.setBounds(117, 30, 86, 20);
-		frame.getContentPane().add(idLogin);
+		idLogin.setBounds(15, 60, 170, 29);
+		idLogin.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		idLogin.setColumns(10);
+		panel.add(idLogin);
 
-		JLabel lblSenha = new JLabel("SENHA:");
-		lblSenha.setBounds(60, 64, 46, 14);
-		frame.getContentPane().add(lblSenha);
+		JLabel labelSenha = new JLabel("Senha");
+		labelSenha.setBounds(25, 97, 33, 15);
+		labelSenha.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		panel.add(labelSenha);
 
 		senhaLogin = new JTextField();
-		senhaLogin.setBounds(117, 61, 86, 20);
-		frame.getContentPane().add(senhaLogin);
+		senhaLogin.setBounds(15, 113, 170, 30);
+		senhaLogin.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		senhaLogin.setColumns(10);
+		panel.add(senhaLogin);
 
 		JButton entrarLogin = new JButton("Entrar");
-		entrarLogin.setBounds(116, 92, 89, 23);
+		entrarLogin.setBounds(6, 154, 90, 35);
 		entrarLogin.addActionListener(manipulador);
-		frame.getContentPane().add(entrarLogin);
+		panel.add(entrarLogin);
 
 		JButton cadastrar = new JButton("Cadastrar");
-		cadastrar.setBounds(111, 126, 100, 23);
+		cadastrar.setBounds(104, 154, 90, 35);
+		panel.add(cadastrar);
+		
+		JLabel lblNewLabel = new JLabel("Login");
+		lblNewLabel.setFont(new Font("Lucida Grande", Font.PLAIN, 18));
+		lblNewLabel.setBounds(76, 6, 48, 21);
+		panel.add(lblNewLabel);
 		cadastrar.addActionListener(manipulador);
-		frame.getContentPane().add(cadastrar);
+
 	}
 }
