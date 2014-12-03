@@ -13,13 +13,13 @@ public class Medico extends Pessoa {
 	private Agenda agendaMedico; 
 
 	public Medico(int id, String especialidade, String nome, String identidade,
-			String cpf, String endereco, String telefone, String nascimento) {
+			String cpf, String endereco, String telefone, String nascimento, Agenda agendaMedico) {
 		super(nome, identidade, cpf, endereco, telefone, nascimento);
 		this.id = id;
 		this.especialidade = especialidade;
 	}
 
-	public Medico(int id, Pessoa p, String especialidade) {
+	public Medico(int id, Pessoa p, String especialidade, Agenda agendaMedico) {
 		super(p.getNome(), p.getIdentidade(), p.getCpf(), p.getEndereco(), p
 				.getTelefone(), p.getNascimento());
 		this.id = id;
