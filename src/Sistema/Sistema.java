@@ -20,6 +20,7 @@ public class Sistema {
 		return listas;
 	}
 
+	@SuppressWarnings("static-access")
 	public void setListas(Listas listas) {
 		this.listas = listas;
 	}

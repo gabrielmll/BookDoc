@@ -2,10 +2,10 @@ package GUI;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowEvent;
+//import java.awt.event.WindowEvent;
 
 import Sistema.*;
-import Testes.LeitorXML;
+//import Testes.LeitorXML;
 import Sistema.Sistema;
 
 public class EventoCadastro implements ActionListener {
@@ -21,8 +21,8 @@ public class EventoCadastro implements ActionListener {
 			String tel = JanelaCadastro.textTel.getText();
 			String nasc = JanelaCadastro.textNascimento.getText();
 
-			String pass = JanelaCadastro.passwordField.getText();
-			String pass2 = JanelaCadastro.confPasswordField.getText();
+			String pass = JanelaCadastro.passwordField.getPassword().toString();
+			String pass2 = JanelaCadastro.confPasswordField.getPassword().toString();
 
 			System.out.println(id + "\n" + nome + "\n" + identidade + "\n"
 					+ cpf + "\n" + end + "\n" + tel + "\n" + nasc + "\n" + pass

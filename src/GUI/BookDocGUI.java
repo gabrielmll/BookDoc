@@ -2,6 +2,8 @@ package GUI;
 
 import java.awt.EventQueue;
 
+@SuppressWarnings("unused")
+
 public class BookDocGUI {
 
 	public static void main(String[] args) {
@@ -11,7 +13,7 @@ public class BookDocGUI {
 			public void run() {
 				try {
 					JanelaLogin window = new JanelaLogin();
-					window.frame.setVisible(true);
+					JanelaLogin.frameJanelaLogin.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

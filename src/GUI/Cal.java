@@ -8,9 +8,9 @@ import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.text.SimpleDateFormat;
+//import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
+//import java.util.Date;
 import java.util.GregorianCalendar;
 
 import javax.swing.BorderFactory;
@@ -27,7 +27,12 @@ import javax.swing.JPanel;
  * @version $Id: Cal.java,v 1.5 2004/02/09 03:33:45 ian Exp $
  */
 public class Cal extends JPanel {
-  /** The currently-interesting year (not modulo 1900!) */
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+/** The currently-interesting year (not modulo 1900!) */
   private static int yy;
 
   /** Currently-interesting month and day */
@@ -239,11 +244,11 @@ public class Cal extends JPanel {
       int year = Calendar.getInstance().get(Calendar.YEAR);
 
       // if days have passed, disable option 
-      if (mm == month  && i < dd) b.disable();
-      else b.enable();
+      if (mm == month  && i < dd) b.setEnabled(false);
+      else b.setEnabled(true);
       
       // if weekends, disable option  
-      if (((leadGap + i) % 7) == 0 || ((leadGap + i) % 7) == 1) b.disable();
+      if (((leadGap + i) % 7) == 0 || ((leadGap + i) % 7) == 1) b.setEnabled(false);
       
       int daysToSumSunday = 26; 
       int daysToSumSaturday = 27; 
@@ -251,15 +256,15 @@ public class Cal extends JPanel {
       int remanescentDays = 0; 
       
       //Disable days of months that won't be in the 20 working days range 
-      if (month == 11 && mm > 1 && yy > year) b.disable();
-      else if (month != 11 && mm > month + 1 || mm < month) b.disable();
+      if (month == 11 && mm > 1 && yy > year) b.setEnabled(false);
+      else if (month != 11 && mm > month + 1 || mm < month) b.setEnabled(false);
 
       //Disable days that are further than 20 working days ahead
       if (((leadGap + i) % 7) == 0) {
     	  remanescentDays = (day + daysToSumSunday) % dom[month];
     	  if (remanescentDays > (dom[month] - day)){
     		  if (mm != month && i > remanescentDays){
-    			  b.disable();
+    			  b.setEnabled(false);
     		  }
     	  }
       }
@@ -267,7 +272,7 @@ public class Cal extends JPanel {
     	  remanescentDays = (day + daysToSumSaturday) % dom[month];
     	  if (remanescentDays > (dom[month] - day)){
     		  if (mm != month && i > remanescentDays){
-    			  b.disable();
+    			  b.setEnabled(false);
     		  }
     	  }
       }
@@ -275,7 +280,7 @@ public class Cal extends JPanel {
     	  remanescentDays = (day + daysToSumNormal) % dom[month];
     	  if (remanescentDays > (dom[month] - day)){
     		  if (mm != month && i > remanescentDays){
-    			  b.disable();
+    			  b.setEnabled(false);
     		  }
     	  }
       } 
@@ -310,9 +315,9 @@ public class Cal extends JPanel {
   /** Set the year, month, and day */
   public void setDate(int yy, int mm, int dd) {
     // System.out.println("Cal::setDate");
-    this.yy = yy;
-    this.mm = mm; // starts at 0, like Date
-    this.dd = dd;
+    Cal.yy = yy;
+    Cal.mm = mm; // starts at 0, like Date
+    Cal.dd = dd;
     recompute();
   }
 

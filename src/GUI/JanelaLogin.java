@@ -8,14 +8,14 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.JPanel;
-import java.awt.FlowLayout;
-import javax.swing.UIManager;
-import javax.swing.border.EmptyBorder;
+
 import java.awt.Color;
+
+@SuppressWarnings("unused")
 
 public class JanelaLogin {
 
-	public static JFrame frame;
+	public static JFrame frameJanelaLogin;
 	protected static JTextField senhaLogin;
 	protected static JTextField idLogin;
 
@@ -29,7 +29,7 @@ public class JanelaLogin {
 				public void run() {
 					try {
 						JanelaLogin window = new JanelaLogin();
-						window.frame.setVisible(true);
+						JanelaLogin.frameJanelaLogin.setVisible(true);
 					} catch (Exception e) {
 						e.printStackTrace();
 					}
@@ -48,10 +48,10 @@ public class JanelaLogin {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 1000, 600);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
+		frameJanelaLogin = new JFrame();
+		frameJanelaLogin.setBounds(100, 100, 1000, 600);
+		frameJanelaLogin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frameJanelaLogin.getContentPane().setLayout(null);
 
 		telaLogin();
 	}
@@ -62,8 +62,13 @@ public class JanelaLogin {
 		JPanel panel = new JPanel();
 		panel.setBackground(Color.WHITE);
 		panel.setBounds(400, 189, 200, 200);
-		frame.getContentPane().add(panel);
 		panel.setLayout(null);
+		frameJanelaLogin.getContentPane().add(panel);
+		
+		JLabel lblNewLabel = new JLabel("Login");
+		lblNewLabel.setFont(new Font("Lucida Grande", Font.PLAIN, 18));
+		lblNewLabel.setBounds(76, 6, 48, 21);
+		panel.add(lblNewLabel);
 
 		JLabel labelId = new JLabel("Identificador");
 		labelId.setBounds(25, 44, 68, 15);
@@ -94,13 +99,8 @@ public class JanelaLogin {
 
 		JButton cadastrar = new JButton("Cadastrar");
 		cadastrar.setBounds(104, 154, 90, 35);
-		panel.add(cadastrar);
-		
-		JLabel lblNewLabel = new JLabel("Login");
-		lblNewLabel.setFont(new Font("Lucida Grande", Font.PLAIN, 18));
-		lblNewLabel.setBounds(76, 6, 48, 21);
-		panel.add(lblNewLabel);
 		cadastrar.addActionListener(manipulador);
+		panel.add(cadastrar);
 
 	}
 }
