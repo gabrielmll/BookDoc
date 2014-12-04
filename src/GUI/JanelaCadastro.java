@@ -94,7 +94,7 @@ public class JanelaCadastro extends JFrame {
 		frameJanelaCadastro.getContentPane().add(contentPanel);
 
 		lblCadastro = new JLabel("Cadastro");
-		lblCadastro.setBounds(161, 5, 78, 21);
+		lblCadastro.setBounds(161, 5, 78, 20);
 		lblCadastro.setFont(new Font("Lucida Grande", Font.PLAIN, 18));
 		contentPanel.add(lblCadastro);
 
@@ -105,7 +105,7 @@ public class JanelaCadastro extends JFrame {
 		contentPanel.add(lblId);
 
 		lblNome = new JLabel("Nome");
-		lblNome.setBounds(24, 90, 52, 15);
+		lblNome.setBounds(25, 90, 52, 15);
 		lblNome.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		contentPanel.add(lblNome);
 

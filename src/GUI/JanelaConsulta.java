@@ -40,7 +40,8 @@ public class JanelaConsulta extends JFrame {
 	protected static JLabel labelCadastro;
 	protected static JLabel labelTipo;
 	protected static JLabel labelFormaPagamento;
-	protected static JLabel labelExame;
+	protected static JLabel labelEspecialidade;
+	protected static JLabel labelMedico;
 	protected static JLabel labelData;
 	private SpringLayout springLayout;
 
@@ -91,48 +92,63 @@ public class JanelaConsulta extends JFrame {
 		frameJanelaConsulta.getContentPane().add(contentPanel);
 		
 		labelCadastro = new JLabel("Agendar Consulta");
-		labelCadastro.setBounds(5, 6, 320, 36);
+		labelCadastro.setBounds(122, 5, 155, 20);
 		contentPanel.add(labelCadastro);
-		labelCadastro.setFont(new Font("Times New Roman", Font.BOLD, 33));
+		labelCadastro.setFont(new Font("Lucida Grande", Font.PLAIN, 18));
 
 		labelTipo = new JLabel("Tipo");
-		labelTipo.setBounds(20, 54, 50, 20);
+		labelTipo.setBounds(25, 40, 50, 20);
 		labelTipo.setHorizontalAlignment(SwingConstants.LEFT);
 		labelTipo.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		contentPanel.add(labelTipo);
 		
 		labelFormaPagamento = new JLabel("Forma de Pagamento");
-		labelFormaPagamento.setBounds(162, 54, 132, 20);
+		labelFormaPagamento.setBounds(245, 40, 132, 20);
 		labelFormaPagamento.setHorizontalAlignment(SwingConstants.LEFT);
 		labelFormaPagamento.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		contentPanel.add(labelFormaPagamento);
 		
-		labelExame = new JLabel("Exame");
-		labelExame.setHorizontalAlignment(SwingConstants.LEFT);
-		labelExame.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		labelExame.setBounds(20, 107, 50, 20);
-		contentPanel.add(labelExame);
+		labelEspecialidade = new JLabel("Especialidade");
+		labelEspecialidade.setHorizontalAlignment(SwingConstants.LEFT);
+		labelEspecialidade.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		labelEspecialidade.setBounds(25, 95, 72, 20);
+		contentPanel.add(labelEspecialidade);
+		
+		labelMedico = new JLabel("Médico");
+		labelMedico.setHorizontalAlignment(SwingConstants.LEFT);
+		labelMedico.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		labelMedico.setBounds(25, 150, 50, 20);
+		contentPanel.add(labelMedico);
 
-		labelData = new JLabel("Escolha uma data");
+		labelData = new JLabel("Escolha uma data e hora");
 		labelData.setHorizontalAlignment(SwingConstants.LEFT);
 		labelData.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		labelData.setBounds(20, 160, 100, 20);
+		labelData.setBounds(25, 200, 140, 20);
 		contentPanel.add(labelData);
 		
 		String[] tipoFatura = { "Particular", "Convênio", "Cortesia" };
 		JComboBox comboTipoFatura = new JComboBox(tipoFatura);
-		comboTipoFatura.setBounds(10, 75, 120, 20);
+		comboTipoFatura.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
+		comboTipoFatura.setBounds(15, 60, 150, 20);
 		contentPanel.add(comboTipoFatura);
 		
 		String[] formaPagamento = { "Dinheiro", "Cartão", "Cheque" };
 		JComboBox comboFormaPagamento = new JComboBox(formaPagamento);
-		comboFormaPagamento.setBounds(152, 75, 142, 20);
+		comboFormaPagamento.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
+		comboFormaPagamento.setBounds(235, 60, 150, 20);
 		contentPanel.add(comboFormaPagamento);
 		
-		String[] tipoExame = { "Exame 1", "Exame 2", "Exame 3" };
-		JComboBox comboTipoExame = new JComboBox(tipoExame);
-		comboTipoExame.setBounds(10, 128, 284, 20);
-		contentPanel.add(comboTipoExame);
+		String[] tipoEspecialidade = { "Pediatra", "Urologista", "Cardiologista" };
+		JComboBox comboTipoEspecialidade = new JComboBox(tipoEspecialidade);
+		comboTipoEspecialidade.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
+		comboTipoEspecialidade.setBounds(15, 115, 362, 20);
+		contentPanel.add(comboTipoEspecialidade);
+		
+		String[] medico = { "Roberto Marinho", "Fernando Henrique", "Alexandre Kalil" };
+		JComboBox comboMedico = new JComboBox(medico);
+		comboMedico.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
+		comboMedico.setBounds(15, 170, 362, 20);
+		contentPanel.add(comboMedico);
 		
 	    JFrame calendarFrame = new JFrame("Calendario");
 	    calendarFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -141,32 +157,20 @@ public class JanelaConsulta extends JFrame {
 	    container.add(new Cal());
 	    calendarFrame.pack();
 	    calendarFrame.setVisible(true);
-	    //this.add(calendarFrame);
-		
-		JLabel labelHora = new JLabel("Hora");
-		labelHora.setHorizontalAlignment(SwingConstants.LEFT);
-		labelHora.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		labelHora.setBounds(237, 160, 50, 22);
-		contentPanel.add(labelHora);
-		
-		JTextField textHora = new JTextField();
-		textHora.setColumns(10);
-		textHora.setBounds(230, 184, 50, 20);
-		contentPanel.add(textHora);
 
 		JLabel labelCamposObrigatrios = new JLabel("* Campos obrigat\u00F3rios");
-		labelCamposObrigatrios.setBounds(11, 216, 161, 14);
+		labelCamposObrigatrios.setBounds(119, 357, 161, 14);
 		contentPanel.add(labelCamposObrigatrios);
 		
-		JButton buttonLimpar = new JButton("Limpar");
-		buttonLimpar.setBounds(48, 252, 89, 23);
-		buttonLimpar.addActionListener(manipulador);
-		contentPanel.add(buttonLimpar);
+		JButton buttonCancelar = new JButton("Cancelar");
+		buttonCancelar.setBounds(220, 313, 90, 35);
+		buttonCancelar.addActionListener(manipulador);
+		contentPanel.add(buttonCancelar);
 
-		JButton buttonCadastrar = new JButton("Agendar");
-		buttonCadastrar.setBounds(173, 251, 89, 23);
-		buttonCadastrar.addActionListener(manipulador);
-		contentPanel.add(buttonCadastrar);
+		JButton buttonAgendar = new JButton("Agendar");
+		buttonAgendar.setBounds(90, 312, 90, 35);
+		buttonAgendar.addActionListener(manipulador);
+		contentPanel.add(buttonAgendar);
 		
 		addWindowListener(closer);
 	}

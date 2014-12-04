@@ -20,8 +20,24 @@ public class EventoAgendamento implements ActionListener {
 			EventQueue.invokeLater(new Runnable() {
 				public void run() {
 					try {
-						JanelaExame janelaAgendamento = new JanelaExame();
+						JanelaExame janelaExame = new JanelaExame();
 						JanelaExame.frameJanelaExame.setVisible(true);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+				}
+			});
+		}
+		
+		if (e.getActionCommand() == "Nova Consulta") {
+			
+			System.out.println("Novo exame!");
+			JanelaAgendamento.frameJanelaAgendamento.setVisible(false);
+			EventQueue.invokeLater(new Runnable() {
+				public void run() {
+					try {
+						JanelaConsulta janelaConsulta = new JanelaConsulta();
+						JanelaConsulta.frameJanelaConsulta.setVisible(true);
 					} catch (Exception e) {
 						e.printStackTrace();
 					}
