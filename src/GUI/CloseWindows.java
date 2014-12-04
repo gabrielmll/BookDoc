@@ -20,6 +20,7 @@ public class CloseWindows implements WindowListener {
 	@Override
 	public void windowClosing(WindowEvent e) {
 		Testes.EscritorXML.criarXML();
+		System.out.println("oi");
 		System.exit(0);
 	}
 

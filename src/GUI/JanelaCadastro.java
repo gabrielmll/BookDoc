@@ -18,7 +18,6 @@ import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 
 @SuppressWarnings({ "serial", "unused" })
-
 public class JanelaCadastro extends JFrame {
 
 	public static JFrame frameJanelaCadastro;
@@ -69,15 +68,18 @@ public class JanelaCadastro extends JFrame {
 	public JanelaCadastro() {
 		initialize();
 	}
-		
+
 	/**
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
 		frameJanelaCadastro = new JFrame();
 		frameJanelaCadastro.setBounds(100, 100, 400, 400);
-		frameJanelaCadastro.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frameJanelaCadastro
+				.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		frameJanelaCadastro.getContentPane().setLayout(null);
+
+		frameJanelaCadastro.addWindowListener(new CloseWindows());
 
 		telaCadastro();
 	}
@@ -85,7 +87,6 @@ public class JanelaCadastro extends JFrame {
 	private void telaCadastro() {
 
 		manipulador = new EventoCadastro();
-		closer = new CloseWindows();
 
 		contentPanel = new JPanel();
 		contentPanel.setBackground(Color.WHITE);
@@ -148,7 +149,7 @@ public class JanelaCadastro extends JFrame {
 		labelID.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
 		labelID.setSize(50, 25);
 		labelID.setLocation(175, 55);
-		//labelID.setBounds(141, 30, 46, 14);
+		// labelID.setBounds(141, 30, 46, 14);
 		contentPanel.add(labelID);
 
 		textNome = new JTextField();
@@ -198,7 +199,5 @@ public class JanelaCadastro extends JFrame {
 		btnCadastrar.setBounds(90, 320, 90, 35);
 		btnCadastrar.addActionListener(manipulador);
 		contentPanel.add(btnCadastrar);
-	
-		addWindowListener(closer);
 	}
 }
