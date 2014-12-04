@@ -20,6 +20,7 @@ import javax.swing.JPasswordField;
 
 public class JanelaCadastro extends JFrame {
 
+	public static JFrame frameJanelaCadastro;
 	public static EventoCadastro manipulador;
 	public static CloseWindows closer;
 	public static JPanel contentPane;
@@ -54,8 +55,8 @@ public class JanelaCadastro extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					JanelaCadastro frame = new JanelaCadastro();
-					frame.setVisible(true);
+					JanelaCadastro frameJanelaCadastro = new JanelaCadastro();
+					JanelaCadastro.frameJanelaCadastro.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -71,12 +72,13 @@ public class JanelaCadastro extends JFrame {
 		manipulador = new EventoCadastro();
 		closer = new CloseWindows();
 
-		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+		//setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		setBounds(100, 100, 1000, 600);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		setContentPane(contentPane);
+
 
 		panel = new JPanel();
 		panel.setBounds(10, 58, 964, 492);

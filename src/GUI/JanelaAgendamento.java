@@ -26,8 +26,17 @@ import javax.swing.AbstractListModel;
 
 public class JanelaAgendamento extends JFrame {
 
-	public static JFrame frame;
-	public static JPanel contentPane;
+	public static JFrame frameJanelaAgendamento;
+	public static EventoCadastro manipulador;
+	public static CloseWindows closer;
+	public static JPanel contentPanel;
+	public static JLabel lblAgendamentos;
+	public static JList listaAgendamentos;
+	protected static JButton btnAlterar;
+	protected static JButton btnCancelar;
+	public static JLabel lblNovoAgendamento;
+	protected static JButton btnExame;
+	protected static JButton btnConsulta;
 
 	/**
 	 * Launch the application.
@@ -36,89 +45,70 @@ public class JanelaAgendamento extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					JanelaAgendamento janelaAgendamento = new JanelaAgendamento();
-					JanelaAgendamento.frame.setVisible(true);
+					JanelaAgendamento frameJanelaAgendamento = new JanelaAgendamento();
+					JanelaAgendamento.frameJanelaAgendamento.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}
 		});
 	}
-	
-
-	/**
-	 * Create the application.
-	 */
-	public JanelaAgendamento() {
-		initialize();
-	}
-
-	/**
-	 * Initialize the contents of the frame.
-	 */
-	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 1000, 600);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
-
-		telaAgendamento();
-	}
 
 	/**
 	 * Create the frame.
 	 */
-	public void telaAgendamento() {
-		EventoCadastro manipulador = new EventoCadastro();
-		CloseWindows closer = new CloseWindows();
+	public JanelaAgendamento() {
+		
+		manipulador = new EventoCadastro();
+		closer = new CloseWindows();
 
-		JPanel panel = new JPanel();
-		panel.setBackground(Color.WHITE);
-		panel.setBounds(300, 89, 400, 400);
-		panel.setLayout(null);
-		frame.getContentPane().add(panel);
+		setBounds(100, 100, 1000, 600);
+		contentPanel = new JPanel();
+		contentPanel.setBackground(Color.WHITE);
+		contentPanel.setBounds(300, 89, 400, 400);
+		contentPanel.setLayout(null);
+		setContentPane(contentPanel);
 
-
-		JLabel lblAgendamentos = new JLabel("Agendamentos");
+		lblAgendamentos = new JLabel("Agendamentos");
 		lblAgendamentos.setBounds(135, 6, 130, 21);
 		lblAgendamentos.setFont(new Font("Lucida Grande", Font.PLAIN, 18));
-		panel.add(lblAgendamentos);
+		contentPanel.add(lblAgendamentos);
 
-		JButton btnAlterar = new JButton("Alterar");
+		btnAlterar = new JButton("Alterar");
 		btnAlterar.setBounds(175, 244, 90, 35);
 		btnAlterar.addActionListener(manipulador);
-		panel.add(btnAlterar);
+		contentPanel.add(btnAlterar);
 		
 		String[] stringAgendamentos = {"Agendamento 1", "Agendamento 2", "Agendamento 3", "Agendamento 4", "Agendamento 5", "Agendamento 6", "Agendamento 7", "Agendamento 8"};
-		JList listaAgendamentos = new JList(stringAgendamentos);
+		listaAgendamentos = new JList(stringAgendamentos);
 	    listaAgendamentos.setVisibleRowCount(4);
 	    listaAgendamentos.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 	    listaAgendamentos.setBounds(48, 130, 262, -91);
 	    listaAgendamentos.setVisible(true);
 		//listaAgendamentos.setSelectedIndex(0);
 	    System.out.println(listaAgendamentos.getSelectedValue());
-	    panel.add(new JScrollPane(listaAgendamentos));
-		panel.add(listaAgendamentos);
+	    //contentPanel.add(new JScrollPane(listaAgendamentos));
+	    contentPanel.add(listaAgendamentos);
 
-		JButton btnCadastrar = new JButton("Cancelar");
-		btnCadastrar.setBounds(286, 244, 90, 35);
-		btnCadastrar.addActionListener(manipulador);
-		panel.add(btnCadastrar);
+		btnCancelar = new JButton("Cancelar");
+		btnCancelar.setBounds(286, 244, 90, 35);
+		btnCancelar.addActionListener(manipulador);
+		contentPanel.add(btnCancelar);
 		
-		JButton btnConsulta = new JButton("Nova Consulta");
-		btnConsulta.setBounds(155, 341, 110, 35);
-		btnConsulta.addActionListener(manipulador);
-		
-		JLabel lblNovoAgendamento = new JLabel("Novo agendamento");
+		lblNovoAgendamento = new JLabel("Novo agendamento");
 		lblNovoAgendamento.setFont(new Font("Lucida Grande", Font.PLAIN, 16));
 		lblNovoAgendamento.setBounds(24, 308, 152, 21);
-		panel.add(lblNovoAgendamento);
-		panel.add(btnConsulta);
-
-		JButton btnExame = new JButton("Novo Exame");
+		contentPanel.add(lblNovoAgendamento);
+		
+		btnExame = new JButton("Novo Exame");
 		btnExame.setBounds(24, 341, 110, 35);
 		btnExame.addActionListener(manipulador);
-		panel.add(btnExame);
+		contentPanel.add(btnExame);
+		
+		btnConsulta = new JButton("Nova Consulta");
+		btnConsulta.setBounds(155, 341, 110, 35);
+		btnConsulta.addActionListener(manipulador);
+		contentPanel.add(btnConsulta);
 	
 		addWindowListener(closer);
 	}
