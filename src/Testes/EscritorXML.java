@@ -31,7 +31,7 @@ public class EscritorXML {
 
 		try {
 			FileWriter arquivo = new FileWriter(new File(
-					"src/Testes/teste1.xml"));
+					"src/Testes/teste2.xml"));
 			xout.output(myDoc, arquivo);
 		} catch (IOException e) {
 
@@ -43,7 +43,8 @@ public class EscritorXML {
 	private static Element criaConsultas() {
 		Element consultas = new Element("consultas");
 
-		for (Consulta c : Sistema.getListas().getConsultas()) {
+		Sistema.getListas();
+		for (Consulta c : Listas.getConsultas()) {
 			Element consulta = new Element("consulta");
 
 			Element data = new Element("data").setText(String.valueOf(c
@@ -69,7 +70,8 @@ public class EscritorXML {
 	private static Element criaExames() {
 		Element exames = new Element("exames");
 
-		for (Exame e : Sistema.getListas().getExames()) {
+		Sistema.getListas();
+		for (Exame e : Listas.getExames()) {
 			Element exame = new Element("exame");
 
 			Element nome = new Element("nome").setText(e.getNome());
@@ -164,8 +166,8 @@ public class EscritorXML {
 						.getTelefone());
 				Element nascimento = new Element("nascimento").setText(p
 						.getNascimento());
-				Element cargo = new Element("cargo")
-						.setText(((Funcionario) p).getCargo());
+				Element cargo = new Element("cargo").setText(((Funcionario) p)
+						.getCargo());
 
 				funcionario.addContent(nome);
 				funcionario.addContent(identidade);
@@ -177,7 +179,7 @@ public class EscritorXML {
 
 				funcionarios.addContent(funcionario);
 			}
-			if(p instanceof Tecnico){
+			if (p instanceof Tecnico) {
 				Element tecnico = new Element("tecnico");
 
 				Element nome = new Element("nome").setText(p.getNome());

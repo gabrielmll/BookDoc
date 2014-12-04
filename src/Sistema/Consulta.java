@@ -10,10 +10,10 @@ package Sistema;
 public class Consulta {
 	private Medico medico;
 	private Cliente cliente;
-	private int data;
+	private String data;
 	private int tipo;
 
-	public Consulta(Medico medico, Cliente cliente, int data, int tipo) {
+	public Consulta(Medico medico, Cliente cliente, String data, int tipo) {
 		this.medico = medico;
 		this.cliente = cliente;
 		this. data = data;
@@ -32,11 +32,11 @@ public class Consulta {
 		return cliente;
 	}
 
-	public int getData() {
+	public String getData() {
 		return data;
 	}
 
-	public void setData(int data) {
+	public void setData(String data) {
 		this.data = data;
 	}
 

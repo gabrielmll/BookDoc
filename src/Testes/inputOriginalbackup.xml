@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listas>
+	<clinica>
+		<nome>L'hopital</nome>
+	</clinica>
+	<pessoas>
+		<clientes>
+			<cliente>
+				<nome>Jao Chaves</nome>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
+				<senha>1</senha>
+			</cliente>
+			<cliente>
+				<nome>Juca Batista</nome>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
+				<senha>1</senha>
+			</cliente>
+			<cliente>
+				<nome>Tiao Maravilha</nome>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
+				<senha>1</senha>
+			</cliente>
+			<cliente>
+				<nome>El Cabron</nome>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
+				<senha>1</senha>
+			</cliente>
+			<cliente>
+				<nome>Juan Valdez</nome>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
+				<senha>1</senha>
+			</cliente>
+		</clientes>
+		<medicos>
+			<medico>
+				<nome>Dr. Rey</nome>
+				<especialidade>Plastica</especialidade>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
+				<datas>
+					<data>201412130931</data>
+					<data>201412130932</data>
+					<data>201412130933</data>
+					<data>201412130934</data>
+					<data>201412130935</data>
+				</datas>
+			</medico>
+			<medico>
+				<nome>Dra. La Rousse</nome>
+				<especialidade>Testa</especialidade>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
+				<datas>
+					<data>201412130933</data>
+					<data>201412130900</data>
+					<data>201412130923</data>
+					<data>201412130943</data>
+					<data>201412130913</data>
+				</datas>
+			</medico>
+			<medico>
+				<nome>Dr. Rodney</nome>
+				<especialidade>Plastica</especialidade>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
+				<datas>
+					<data></data>
+				</datas>
+			</medico>
+			<medico>
+				<nome>Dra. Maria Joana</nome>
+				<especialidade>Psicologia</especialidade>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
+				<datas>
+					<data>201412130930</data>
+					<data>201412130930</data>
+					<data>201412130930</data>
+					<data>201412130930</data>
+					<data>201412130930</data>
+				</datas>	
+			
+			</medico>
+			<medico>
+				<nome>Dr. Dalai Lama</nome>
+				<especialidade>Cardiologia</especialidade>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
+				<datas>
+					<data>201412130930</data>
+					<data>201412130930</data>
+					<data>201412130930</data>
+					<data>201412130930</data>
+					<data>201412130930</data>
+				</datas>
+			</medico>
+		</medicos>
+		<funcionarios>
+			<funcionario>
+				<nome>Zelha</nome>
+				<cargo>Administrativo</cargo>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
+			</funcionario>
+			<funcionario>
+				<nome>Duncan</nome>
+				<cargo>Financeiro</cargo>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
+			</funcionario>
+			<funcionario>
+				<nome>El Perone del Nacho</nome>
+				<cargo>Marketing</cargo>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
+			</funcionario>
+			<funcionario>
+				<nome>Jorge Ben</nome>
+				<cargo>CEO</cargo>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
+			</funcionario>
+		</funcionarios>
+		<tecnicos>
+			<tecnico>
+				<nome>X-man</nome>
+				<especialidade>Raio X</especialidade>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
+			</tecnico>
+			<tecnico>
+				<nome>Cara do sangue</nome>
+				<especialidade>Exame de Sangue</especialidade>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
+			</tecnico>
+			<tecnico>
+				<nome>Fermara</nome>
+				<especialidade>Raio X</especialidade>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
+			</tecnico>
+			<tecnico>
+				<nome>Don Corleone</nome>
+				<especialidade>Exame de Sangue</especialidade>
+				<identidade>11222333</identidade>
+				<cpf>12312312345</cpf>
+				<endereco>Rua Aur, 555</endereco>
+				<telefone>3278-7591</telefone>
+				<nascimento>19831012</nascimento>
+			</tecnico>
+		</tecnicos>
+	</pessoas>
+	<exames>
+		<exame>
+			<nome>Raio-x</nome>
+			<tipo>1</tipo>
+			<data>201411150900</data>
+			<idCliente>1</idCliente>
+			<tipoPagamento>Cortesia</tipoPagamento>
+		</exame>
+		<exame>
+			<nome>Raio-x</nome>
+			<tipo>1</tipo>
+			<data>201411150900</data>
+			<idCliente>1</idCliente>
+			<tipoPagamento>Cheque</tipoPagamento>
+		</exame>
+		<exame>
+			<nome>Raio-x</nome>
+			<tipo>1</tipo>
+			<data>201411150900</data>
+			<idCliente>1</idCliente>
+			<tipoPagamento>Cartao</tipoPagamento>
+		</exame>
+		<exame>
+			<nome>Raio-x</nome>
+			<tipo>1</tipo>
+			<data>201411150900</data>
+			<idCliente>1</idCliente>
+			<tipoPagamento>Convenio</tipoPagamento>
+		</exame>
+	</exames>
+	<consultas>
+		<consulta>
+			<data>201411150900</data>
+			<idMedico>1</idMedico>
+			<idCliente>1</idCliente>
+			<tipo>1</tipo>
+			<tipoPagamento>Dinheiro</tipoPagamento>
+		</consulta>
+		<consulta>
+			<data>201411150900</data>
+			<idMedico>2</idMedico>
+			<idCliente>3</idCliente>
+			<tipo>1</tipo>
+			<tipoPagamento>Cortesia</tipoPagamento>
+		</consulta>
+	</consultas>
+</listas>

@@ -109,21 +109,20 @@ public class LeitorXML {
 					String nascimento = individuo.getChildText("nascimento");
 					String especialidade = individuo
 							.getChildText("especialidade");
-					
+
 					Agenda agendaMedico = new Agenda();
 
-					
-					
 					Element datas = individuo.getChild("datas");
 					List<Element> ds = datas.getChildren("data");
-					for (Element data : ds){
+					for (Element data : ds) {
 						String date = data.getValue();
 						agendaMedico.addData(date);
 					}
-					
+
 					Medico m = new Medico(0, criaPessoa(nome, identidade, cpf,
-							endereco, telefone, nascimento), especialidade, agendaMedico);
-					
+							endereco, telefone, nascimento), especialidade,
+							agendaMedico);
+
 					sis.addPessoa(m);
 				}
 			}
@@ -189,7 +188,8 @@ public class LeitorXML {
 
 				// int data = Integer.parseInt(cadaExame.getChildText("data"));
 				int tipo = Integer.parseInt(cadaExame.getChildText("tipo"));
-				sis.addExame(new Exame(nome, c, 0, tipo));
+				String data = cadaExame.getChildText("data");
+				sis.addExame(new Exame(nome, c, data, tipo));
 			}
 		}
 	}
@@ -208,11 +208,10 @@ public class LeitorXML {
 								Integer.parseInt(cadaConsulta
 										.getChildText("idMedico")));
 
-				// int data =
-				// Integer.parseInt(cadaConsulta.getChildText("data"));
+				String data = cadaConsulta.getChildText("data");
 				int tipo = Integer.parseInt(cadaConsulta.getChildText("tipo"));
 
-				sis.addConsulta(new Consulta(md, cl, 0, tipo));
+				sis.addConsulta(new Consulta(md, cl, data, tipo));
 
 			}
 		}

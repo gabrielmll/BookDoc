@@ -10,12 +10,12 @@ package Sistema;
 public class Exame {
 	private String nome;
 	private Cliente cliente;
-	private int data;
+	private String data;
 	private int tipo;
 	
 	private static Agenda agenda;
 	
-	public Exame(String nome, Cliente cliente, int data, int tipo) {
+	public Exame(String nome, Cliente cliente, String data, int tipo) {
 		this.nome = nome;
 		this.cliente = cliente;
 		this.data = data;
@@ -38,11 +38,11 @@ public class Exame {
 		this.cliente = cliente;
 	}
 
-	public int getData() {
+	public String getData() {
 		return data;
 	}
 
-	public void setData(int data) {
+	public void setData(String data) {
 		this.data = data;
 	}
 
