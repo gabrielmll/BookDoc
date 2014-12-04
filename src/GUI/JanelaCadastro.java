@@ -25,7 +25,6 @@ public class JanelaCadastro extends JFrame {
 	public static EventoCadastro manipulador;
 	public static CloseWindows closer;
 	public static JPanel contentPanel;
-	public static JPanel panel;
 	protected static JLabel labelID;
 	protected static JLabel lblCadastro;
 	protected static JLabel lblId;
@@ -76,7 +75,7 @@ public class JanelaCadastro extends JFrame {
 	 */
 	private void initialize() {
 		frameJanelaCadastro = new JFrame();
-		frameJanelaCadastro.setBounds(100, 100, 1000, 600);
+		frameJanelaCadastro.setBounds(100, 100, 400, 400);
 		frameJanelaCadastro.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frameJanelaCadastro.getContentPane().setLayout(null);
 
@@ -90,7 +89,7 @@ public class JanelaCadastro extends JFrame {
 
 		contentPanel = new JPanel();
 		contentPanel.setBackground(Color.WHITE);
-		contentPanel.setBounds(300, 89, 400, 400);
+		contentPanel.setBounds(0, 0, 400, 400);
 		contentPanel.setLayout(null);
 		frameJanelaCadastro.getContentPane().add(contentPanel);
 

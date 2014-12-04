@@ -1,6 +1,7 @@
 package GUI;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.Container;
 import java.awt.EventQueue;
@@ -32,8 +33,10 @@ import javax.swing.SpringLayout;
 
 public class JanelaExame extends JFrame {
 	
-	public static JPanel contentPane;
-	protected static JPanel panel;
+	public static JFrame frameJanelaExame;
+	public static EventoCadastro manipulador;
+	public static CloseWindows closer;
+	public static JPanel contentPanel;
 	protected static JLabel labelCadastro;
 	protected static JLabel labelTipo;
 	protected static JLabel labelFormaPagamento;
@@ -48,8 +51,8 @@ public class JanelaExame extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					JanelaExame frame = new JanelaExame();
-					frame.setVisible(true);
+					JanelaExame frameJanelaExame = new JanelaExame();
+					JanelaExame.frameJanelaExame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -58,68 +61,78 @@ public class JanelaExame extends JFrame {
 	}
 
 	/**
-	 * Create the frame.
+	 * Create the application.
 	 */
 	public JanelaExame() {
-
-		EventoCadastro manipulador = new EventoCadastro();
-		CloseWindows closer = new CloseWindows();
-
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 320, 320);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(0, 0, 0, 0));
-		setContentPane(contentPane);
-		contentPane.setLayout(null);
-
-		panel = new JPanel();
-		panel.setBounds(0, 0, 320, 298);
-		contentPane.add(panel);
-		panel.setLayout(null);
+		initialize();
+	}
 		
-		labelCadastro = new JLabel("AGENDAR EXAME");
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frameJanelaExame = new JFrame();
+		frameJanelaExame.setBounds(100, 100, 400, 400);
+		frameJanelaExame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frameJanelaExame.getContentPane().setLayout(null);
+
+		telaExame();
+	}
+
+	private void telaExame() {
+
+		manipulador = new EventoCadastro();
+		closer = new CloseWindows();
+
+		contentPanel = new JPanel();
+		contentPanel.setBackground(Color.WHITE);
+		contentPanel.setBounds(0, 0, 400, 400);
+		contentPanel.setLayout(null);
+		frameJanelaExame.getContentPane().add(contentPanel);
+		
+		labelCadastro = new JLabel("Agendar Exame");
 		labelCadastro.setBounds(5, 6, 320, 36);
-		panel.add(labelCadastro);
+		contentPanel.add(labelCadastro);
 		labelCadastro.setFont(new Font("Times New Roman", Font.BOLD, 33));
 
 		labelTipo = new JLabel("Tipo");
 		labelTipo.setBounds(20, 54, 50, 20);
 		labelTipo.setHorizontalAlignment(SwingConstants.LEFT);
 		labelTipo.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		panel.add(labelTipo);
+		contentPanel.add(labelTipo);
 		
 		labelFormaPagamento = new JLabel("Forma de Pagamento");
 		labelFormaPagamento.setBounds(162, 54, 132, 20);
 		labelFormaPagamento.setHorizontalAlignment(SwingConstants.LEFT);
 		labelFormaPagamento.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		panel.add(labelFormaPagamento);
+		contentPanel.add(labelFormaPagamento);
 		
 		labelExame = new JLabel("Exame");
 		labelExame.setHorizontalAlignment(SwingConstants.LEFT);
 		labelExame.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		labelExame.setBounds(20, 107, 50, 20);
-		panel.add(labelExame);
+		contentPanel.add(labelExame);
 
 		labelData = new JLabel("Escolha uma data");
 		labelData.setHorizontalAlignment(SwingConstants.LEFT);
 		labelData.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		labelData.setBounds(20, 160, 100, 20);
-		panel.add(labelData);
+		contentPanel.add(labelData);
 		
 		String[] tipoFatura = { "Particular", "Convênio", "Cortesia" };
 		JComboBox comboTipoFatura = new JComboBox(tipoFatura);
 		comboTipoFatura.setBounds(10, 75, 120, 20);
-		panel.add(comboTipoFatura);
+		contentPanel.add(comboTipoFatura);
 		
 		String[] formaPagamento = { "Dinheiro", "Cartão", "Cheque" };
 		JComboBox comboFormaPagamento = new JComboBox(formaPagamento);
 		comboFormaPagamento.setBounds(152, 75, 142, 20);
-		panel.add(comboFormaPagamento);
+		contentPanel.add(comboFormaPagamento);
 		
 		String[] tipoExame = { "Exame 1", "Exame 2", "Exame 3" };
 		JComboBox comboTipoExame = new JComboBox(tipoExame);
 		comboTipoExame.setBounds(10, 128, 284, 20);
-		panel.add(comboTipoExame);
+		contentPanel.add(comboTipoExame);
 		
 	    JFrame calendarFrame = new JFrame("Calendario");
 	    calendarFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -134,26 +147,26 @@ public class JanelaExame extends JFrame {
 		labelHora.setHorizontalAlignment(SwingConstants.LEFT);
 		labelHora.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		labelHora.setBounds(237, 160, 50, 22);
-		panel.add(labelHora);
+		contentPanel.add(labelHora);
 		
 		JTextField textHora = new JTextField();
 		textHora.setColumns(10);
 		textHora.setBounds(230, 184, 50, 20);
-		panel.add(textHora);
+		contentPanel.add(textHora);
 
 		JLabel labelCamposObrigatrios = new JLabel("* Campos obrigat\u00F3rios");
 		labelCamposObrigatrios.setBounds(11, 216, 161, 14);
-		panel.add(labelCamposObrigatrios);
+		contentPanel.add(labelCamposObrigatrios);
 		
 		JButton buttonLimpar = new JButton("Limpar");
 		buttonLimpar.setBounds(48, 252, 89, 23);
 		buttonLimpar.addActionListener(manipulador);
-		panel.add(buttonLimpar);
+		contentPanel.add(buttonLimpar);
 
 		JButton buttonCadastrar = new JButton("Agendar");
 		buttonCadastrar.setBounds(173, 251, 89, 23);
 		buttonCadastrar.addActionListener(manipulador);
-		panel.add(buttonCadastrar);
+		contentPanel.add(buttonCadastrar);
 		
 		addWindowListener(closer);
 	}

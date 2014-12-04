@@ -48,7 +48,7 @@ public class EventoLogin implements ActionListener {
 				public void run() {
 					try {
 						JanelaCadastro janelaCadastro = new JanelaCadastro();
-						janelaCadastro.setVisible(true);
+						JanelaCadastro.frameJanelaCadastro.setVisible(true);
 					} catch (Exception e) {
 						e.printStackTrace();
 					}

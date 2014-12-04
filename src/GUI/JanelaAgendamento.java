@@ -21,13 +21,15 @@ import javax.swing.JPasswordField;
 import javax.swing.JList;
 import javax.swing.ListSelectionModel;
 import javax.swing.AbstractListModel;
+import javax.swing.UIManager;
+import javax.swing.border.LineBorder;
 
 @SuppressWarnings({ "serial", "unused" })
 
 public class JanelaAgendamento extends JFrame {
 
 	public static JFrame frameJanelaAgendamento;
-	public static EventoCadastro manipulador;
+	public static EventoAgendamento manipulador;
 	public static CloseWindows closer;
 	public static JPanel contentPanel;
 	public static JLabel lblAgendamentos;
@@ -66,7 +68,7 @@ public class JanelaAgendamento extends JFrame {
 	 */
 	private void initialize() {
 		frameJanelaAgendamento = new JFrame();
-		frameJanelaAgendamento.setBounds(100, 100, 1000, 600);
+		frameJanelaAgendamento.setBounds(100, 100, 400, 400);
 		frameJanelaAgendamento.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frameJanelaAgendamento.getContentPane().setLayout(null);
 
@@ -75,12 +77,12 @@ public class JanelaAgendamento extends JFrame {
 
 	private void telaAgendamento() {		
 		
-		manipulador = new EventoCadastro();
+		manipulador = new EventoAgendamento();
 		closer = new CloseWindows();
 
 		contentPanel = new JPanel();
 		contentPanel.setBackground(Color.WHITE);
-		contentPanel.setBounds(300, 89, 400, 400);
+		contentPanel.setBounds(0, 0, 400, 400);
 		contentPanel.setLayout(null);
 		frameJanelaAgendamento.getContentPane().add(contentPanel);
 
@@ -90,38 +92,38 @@ public class JanelaAgendamento extends JFrame {
 		contentPanel.add(lblAgendamentos);
 
 		btnAlterar = new JButton("Alterar");
-		btnAlterar.setBounds(175, 244, 90, 35);
+		btnAlterar.setBounds(100, 132, 90, 30);
 		btnAlterar.addActionListener(manipulador);
 		contentPanel.add(btnAlterar);
 		
 		String[] stringAgendamentos = {"Agendamento 1", "Agendamento 2", "Agendamento 3", "Agendamento 4", "Agendamento 5", "Agendamento 6", "Agendamento 7", "Agendamento 8"};
 		listaAgendamentos = new JList(stringAgendamentos);
+		listaAgendamentos.setBorder(new LineBorder(new Color(0, 0, 0)));
 	    listaAgendamentos.setVisibleRowCount(4);
 	    listaAgendamentos.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-	    listaAgendamentos.setBounds(48, 130, 262, -91);
-	    listaAgendamentos.setVisible(true);
+	    listaAgendamentos.setBounds(25, 50, 350, 70);
 		//listaAgendamentos.setSelectedIndex(0);
 	    System.out.println(listaAgendamentos.getSelectedValue());
 	    //contentPanel.add(new JScrollPane(listaAgendamentos));
 	    contentPanel.add(listaAgendamentos);
 
 		btnCancelar = new JButton("Cancelar");
-		btnCancelar.setBounds(286, 244, 90, 35);
+		btnCancelar.setBounds(230, 132, 90, 30);
 		btnCancelar.addActionListener(manipulador);
 		contentPanel.add(btnCancelar);
 		
 		lblNovoAgendamento = new JLabel("Novo agendamento");
 		lblNovoAgendamento.setFont(new Font("Lucida Grande", Font.PLAIN, 16));
-		lblNovoAgendamento.setBounds(24, 308, 152, 21);
+		lblNovoAgendamento.setBounds(124, 192, 152, 21);
 		contentPanel.add(lblNovoAgendamento);
 		
 		btnExame = new JButton("Novo Exame");
-		btnExame.setBounds(24, 341, 110, 35);
+		btnExame.setBounds(80, 234, 110, 35);
 		btnExame.addActionListener(manipulador);
 		contentPanel.add(btnExame);
 		
 		btnConsulta = new JButton("Nova Consulta");
-		btnConsulta.setBounds(155, 341, 110, 35);
+		btnConsulta.setBounds(210, 234, 110, 35);
 		btnConsulta.addActionListener(manipulador);
 		contentPanel.add(btnConsulta);
 	

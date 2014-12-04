@@ -49,7 +49,7 @@ public class JanelaLogin {
 	 */
 	private void initialize() {
 		frameJanelaLogin = new JFrame();
-		frameJanelaLogin.setBounds(100, 100, 1000, 600);
+		frameJanelaLogin.setBounds(100, 100, 400, 400);
 		frameJanelaLogin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frameJanelaLogin.getContentPane().setLayout(null);
 
@@ -62,7 +62,7 @@ public class JanelaLogin {
 		
 		JPanel panel = new JPanel();
 		panel.setBackground(Color.WHITE);
-		panel.setBounds(400, 189, 200, 200);
+		panel.setBounds(100, 100, 200, 200);
 		panel.setLayout(null);
 		frameJanelaLogin.getContentPane().add(panel);
 		
