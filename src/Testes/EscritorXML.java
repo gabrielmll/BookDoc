@@ -143,6 +143,15 @@ public class EscritorXML {
 				Element especialidade = new Element("especialidade")
 						.setText(((Medico) p).getEspecialidade());
 
+				Element datas = new Element("datas");
+/*
+				for (String horario : ((Medico) p).getAgendaMedico()
+						.getHorariosOcupados()) {
+					Element data = new Element("data").setText(horario);
+					
+					datas.addContent(data);
+				}*/
+
 				medico.addContent(nome);
 				medico.addContent(identidade);
 				medico.addContent(cpf);
@@ -150,6 +159,7 @@ public class EscritorXML {
 				medico.addContent(telefone);
 				medico.addContent(nascimento);
 				medico.addContent(especialidade);
+				medico.addContent(datas);
 
 				medicos.addContent(medico);
 			}

@@ -17,4 +17,8 @@ public class Agenda {
 	public void addData(String data){
 		horariosOcupados.add(data);
 	}
+	
+	public ArrayList<String> getHorariosOcupados(){
+		return horariosOcupados;
+	}
 }
