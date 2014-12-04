@@ -53,21 +53,36 @@ public class JanelaAgendamento extends JFrame {
 			}
 		});
 	}
-
+		
 	/**
-	 * Create the frame.
+	 * Create the application.
 	 */
 	public JanelaAgendamento() {
+		initialize();
+	}
+		
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frameJanelaAgendamento = new JFrame();
+		frameJanelaAgendamento.setBounds(100, 100, 1000, 600);
+		frameJanelaAgendamento.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frameJanelaAgendamento.getContentPane().setLayout(null);
+
+		telaAgendamento();
+	}
+
+	private void telaAgendamento() {		
 		
 		manipulador = new EventoCadastro();
 		closer = new CloseWindows();
 
-		setBounds(100, 100, 1000, 600);
 		contentPanel = new JPanel();
 		contentPanel.setBackground(Color.WHITE);
 		contentPanel.setBounds(300, 89, 400, 400);
 		contentPanel.setLayout(null);
-		setContentPane(contentPanel);
+		frameJanelaAgendamento.getContentPane().add(contentPanel);
 
 		lblAgendamentos = new JLabel("Agendamentos");
 		lblAgendamentos.setBounds(135, 6, 130, 21);

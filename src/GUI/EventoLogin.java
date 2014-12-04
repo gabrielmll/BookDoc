@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 
 import Sistema.Sistema;
 
-//@SuppressWarnings("unused")
+@SuppressWarnings("unused")
 
 public class EventoLogin implements ActionListener {
 
@@ -25,7 +25,7 @@ public class EventoLogin implements ActionListener {
 					public void run() {
 						try {
 							JanelaAgendamento janelaAgendamento = new JanelaAgendamento();
-							janelaAgendamento.setVisible(true);
+							JanelaAgendamento.frameJanelaAgendamento.setVisible(true);
 						} catch (Exception e) {
 							e.printStackTrace();
 						}

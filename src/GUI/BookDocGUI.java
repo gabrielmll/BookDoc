@@ -12,7 +12,7 @@ public class BookDocGUI {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					JanelaLogin window = new JanelaLogin();
+					JanelaLogin frameJanelaLogin = new JanelaLogin();
 					JanelaLogin.frameJanelaLogin.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();

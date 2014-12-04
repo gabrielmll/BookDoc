@@ -57,6 +57,7 @@ public class JanelaLogin {
 	}
 
 	private void telaLogin() {
+		
 		EventoLogin manipulador = new EventoLogin();
 		
 		JPanel panel = new JPanel();
@@ -67,38 +68,38 @@ public class JanelaLogin {
 		
 		JLabel lblNewLabel = new JLabel("Login");
 		lblNewLabel.setFont(new Font("Lucida Grande", Font.PLAIN, 18));
-		lblNewLabel.setBounds(76, 6, 48, 21);
+		lblNewLabel.setBounds(76, 5, 48, 21);
 		panel.add(lblNewLabel);
 
 		JLabel labelId = new JLabel("Identificador");
-		labelId.setBounds(25, 44, 68, 15);
+		labelId.setBounds(25, 40, 68, 15);
 		labelId.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		panel.add(labelId);
 
 		idLogin = new JTextField();
-		idLogin.setBounds(15, 60, 170, 29);
+		idLogin.setBounds(15, 55, 170, 29);
 		idLogin.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		idLogin.setColumns(10);
 		panel.add(idLogin);
 
 		JLabel labelSenha = new JLabel("Senha");
-		labelSenha.setBounds(25, 97, 33, 15);
+		labelSenha.setBounds(25, 90, 33, 15);
 		labelSenha.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		panel.add(labelSenha);
 
 		senhaLogin = new JTextField();
-		senhaLogin.setBounds(15, 113, 170, 30);
+		senhaLogin.setBounds(15, 105, 170, 30);
 		senhaLogin.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		senhaLogin.setColumns(10);
 		panel.add(senhaLogin);
 
 		JButton entrarLogin = new JButton("Entrar");
-		entrarLogin.setBounds(6, 154, 90, 35);
+		entrarLogin.setBounds(6, 150, 90, 35);
 		entrarLogin.addActionListener(manipulador);
 		panel.add(entrarLogin);
 
 		JButton cadastrar = new JButton("Cadastrar");
-		cadastrar.setBounds(104, 154, 90, 35);
+		cadastrar.setBounds(104, 150, 90, 35);
 		cadastrar.addActionListener(manipulador);
 		panel.add(cadastrar);
 
