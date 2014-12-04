@@ -31,10 +31,10 @@ import javax.swing.SpringLayout;
 
 @SuppressWarnings({ "serial", "unused" })
 
-public class JanelaExame extends JFrame {
+public class JanelaConsulta extends JFrame {
 	
-	public static JFrame frameJanelaExame;
-	public static EventoExame manipulador;
+	public static JFrame frameJanelaConsulta;
+	public static EventoConsulta manipulador;
 	public static CloseWindows closer;
 	public static JPanel contentPanel;
 	protected static JLabel labelCadastro;
@@ -51,8 +51,8 @@ public class JanelaExame extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					JanelaExame frameJanelaExame = new JanelaExame();
-					JanelaExame.frameJanelaExame.setVisible(true);
+					JanelaConsulta frameJanelaConsulta = new JanelaConsulta();
+					JanelaConsulta.frameJanelaConsulta.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -63,7 +63,7 @@ public class JanelaExame extends JFrame {
 	/**
 	 * Create the application.
 	 */
-	public JanelaExame() {
+	public JanelaConsulta() {
 		initialize();
 	}
 		
@@ -71,26 +71,26 @@ public class JanelaExame extends JFrame {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frameJanelaExame = new JFrame();
-		frameJanelaExame.setBounds(100, 100, 400, 400);
-		frameJanelaExame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frameJanelaExame.getContentPane().setLayout(null);
+		frameJanelaConsulta = new JFrame();
+		frameJanelaConsulta.setBounds(100, 100, 400, 400);
+		frameJanelaConsulta.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frameJanelaConsulta.getContentPane().setLayout(null);
 
-		telaExame();
+		telaConsulta();
 	}
 
-	private void telaExame() {
+	private void telaConsulta() {
 
-		manipulador = new EventoExame();
+		manipulador = new EventoConsulta();
 		closer = new CloseWindows();
 
 		contentPanel = new JPanel();
 		contentPanel.setBackground(Color.WHITE);
 		contentPanel.setBounds(0, 0, 400, 400);
 		contentPanel.setLayout(null);
-		frameJanelaExame.getContentPane().add(contentPanel);
+		frameJanelaConsulta.getContentPane().add(contentPanel);
 		
-		labelCadastro = new JLabel("Agendar Exame");
+		labelCadastro = new JLabel("Agendar Consulta");
 		labelCadastro.setBounds(5, 6, 320, 36);
 		contentPanel.add(labelCadastro);
 		labelCadastro.setFont(new Font("Times New Roman", Font.BOLD, 33));
