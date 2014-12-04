@@ -75,6 +75,8 @@ public class JanelaExame extends JFrame {
 		frameJanelaExame.setBounds(100, 100, 400, 400);
 		frameJanelaExame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frameJanelaExame.getContentPane().setLayout(null);
+		
+		frameJanelaExame.addWindowListener(new CloseWindows());
 
 		telaExame();
 	}
@@ -82,7 +84,6 @@ public class JanelaExame extends JFrame {
 	private void telaExame() {
 
 		manipulador = new EventoExame();
-		closer = new CloseWindows();
 
 		contentPanel = new JPanel();
 		contentPanel.setBackground(Color.WHITE);
@@ -119,19 +120,19 @@ public class JanelaExame extends JFrame {
 		labelData.setBounds(25, 150, 140, 20);
 		contentPanel.add(labelData);
 		
-		String[] tipoFatura = { "Particular", "Convênio", "Cortesia" };
+		String[] tipoFatura = { "Particular", "ConvÔøΩnio", "Cortesia" };
 		JComboBox comboTipoFatura = new JComboBox(tipoFatura);
 		comboTipoFatura.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
 		comboTipoFatura.setBounds(15, 60, 150, 20);
 		contentPanel.add(comboTipoFatura);
 		
-		String[] formaPagamento = { "Dinheiro", "Cartão", "Cheque" };
+		String[] formaPagamento = { "Dinheiro", "Cart‚Äπo", "Cheque" };
 		JComboBox comboFormaPagamento = new JComboBox(formaPagamento);
 		comboFormaPagamento.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
 		comboFormaPagamento.setBounds(235, 60, 150, 20);
 		contentPanel.add(comboFormaPagamento);
 		
-		String[] tipoExame = { "Raio X", "Ultrasom", "Ressonância Magnética" };
+		String[] tipoExame = { "Raio X", "Ultrasom", "Resson‚Ä∞ncia Magn≈Ωtica" };
 		JComboBox comboTipoExame = new JComboBox(tipoExame);
 		comboTipoExame.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
 		comboTipoExame.setBounds(15, 115, 362, 20);
@@ -158,7 +159,5 @@ public class JanelaExame extends JFrame {
 		buttonAgendar.setBounds(90, 312, 90, 35);
 		buttonAgendar.addActionListener(manipulador);
 		contentPanel.add(buttonAgendar);
-		
-		addWindowListener(closer);
 	}
 }

@@ -71,6 +71,8 @@ public class JanelaAgendamento extends JFrame {
 		frameJanelaAgendamento.setBounds(100, 100, 400, 400);
 		frameJanelaAgendamento.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frameJanelaAgendamento.getContentPane().setLayout(null);
+		
+		frameJanelaAgendamento.addWindowListener(new CloseWindows());
 
 		telaAgendamento();
 	}
@@ -78,7 +80,6 @@ public class JanelaAgendamento extends JFrame {
 	private void telaAgendamento() {		
 		
 		manipulador = new EventoAgendamento();
-		closer = new CloseWindows();
 
 		contentPanel = new JPanel();
 		contentPanel.setBackground(Color.WHITE);
@@ -126,7 +127,5 @@ public class JanelaAgendamento extends JFrame {
 		btnConsulta.setBounds(210, 234, 110, 35);
 		btnConsulta.addActionListener(manipulador);
 		contentPanel.add(btnConsulta);
-	
-		addWindowListener(closer);
 	}
 }
